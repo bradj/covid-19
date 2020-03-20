@@ -12,8 +12,8 @@ const DATA_WITH_DATES = DATA.series.map(d => {
 });
 
 const width = document.body.clientWidth;
-const margin = ({top: 20, right: 30, bottom: 30, left: 40});
-const height = 800;
+const margin = ({top: 30, right: 40, bottom: 30, left: 40});
+const height = 500;
 
 const x = d3.scaleUtc()
     .domain(d3.extent(CONVERTED_DATES, d => d))
@@ -69,15 +69,18 @@ const bisectDate = d3.bisector(function(d) {
 
 function hover(svg, path) {
 
-  if ("ontouchstart" in document) svg
-      .style("-webkit-tap-highlight-color", "transparent")
+  if ("ontouchstart" in document) {
+    svg.style("-webkit-tap-highlight-color", "transparent")
       .on("touchmove", moved)
       .on("touchstart", entered)
-      .on("touchend", left)
-  else svg
+      .on("touchend", left);
+  }
+  else {
+    svg
       .on("mousemove", moved)
       .on("mouseenter", entered)
       .on("mouseleave", left);
+  }
 
   const dot = svg.append("g")
       .attr("display", "none");
@@ -116,6 +119,7 @@ function hover(svg, path) {
         mouse_line_deltas.push({
             country: s,
             diff: Math.abs(s.values[i].cases - cases_coord),
+            cases: Math.round(s.values[i].cases),
             idx: i
         });
     }
@@ -129,7 +133,7 @@ function hover(svg, path) {
     }).filter(d => d.name === closest.country.name).raise();
 
     dot.attr("transform", `translate(${x(closest.country.values[i].date)},${y(closest.country.values[i].cases)})`);
-    dot.select("text").text(closest.country.name);
+    dot.select("text").text(`${closest.country.name} / ${closest.cases}`);
   }
 
   function entered() {
