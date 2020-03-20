@@ -13,4 +13,4 @@ beautifulsoup4 = "*"
 python_version = "3.7"
 
 [scripts]
-get = "python -m covid_19.main"
+scrape = "python -m covid_19.scrape"
