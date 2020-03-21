@@ -78,7 +78,7 @@ const DATA = {
     ],
     "series": [
         {
-            "name": "China  (Mainland)",
+            "name": "China  (mainland)",
             "stats": {
                 "cases": 81008,
                 "deaths": 3255,
@@ -520,8 +520,8 @@ const DATA = {
         {
             "name": "Spain",
             "stats": {
-                "cases": 24980,
-                "deaths": 1347,
+                "cases": 25374,
+                "deaths": 1378,
                 "recovered": 2125
             },
             "values": [
@@ -646,7 +646,7 @@ const DATA = {
                     "date": "2020-03-20"
                 },
                 {
-                    "cases": 24980,
+                    "cases": 25374,
                     "date": "2020-03-21"
                 }
             ]
@@ -654,8 +654,8 @@ const DATA = {
         {
             "name": "Germany",
             "stats": {
-                "cases": 20705,
-                "deaths": 72,
+                "cases": 21652,
+                "deaths": 73,
                 "recovered": 209
             },
             "values": [
@@ -910,7 +910,7 @@ const DATA = {
         {
             "name": "United States",
             "stats": {
-                "cases": 19843,
+                "cases": 19861,
                 "deaths": 276,
                 "recovered": 147
             },
@@ -1494,7 +1494,7 @@ const DATA = {
         {
             "name": "United Kingdom",
             "stats": {
-                "cases": 4000,
+                "cases": 4014,
                 "deaths": 178,
                 "recovered": 81
             },
@@ -1712,6 +1712,10 @@ const DATA = {
                 {
                     "cases": 2994,
                     "date": "2020-03-20"
+                },
+                {
+                    "cases": 3631,
+                    "date": "2020-03-21"
                 }
             ]
         },
@@ -1816,8 +1820,8 @@ const DATA = {
         {
             "name": "Austria",
             "stats": {
-                "cases": 2727,
-                "deaths": 7,
+                "cases": 2814,
+                "deaths": 8,
                 "recovered": 9
             },
             "values": [
@@ -1906,7 +1910,7 @@ const DATA = {
                     "date": "2020-03-20"
                 },
                 {
-                    "cases": 2664,
+                    "cases": 2814,
                     "date": "2020-03-21"
                 }
             ]
@@ -1914,7 +1918,7 @@ const DATA = {
         {
             "name": "Norway",
             "stats": {
-                "cases": 1997,
+                "cases": 2017,
                 "deaths": 7,
                 "recovered": "-"
             },
@@ -2024,7 +2028,7 @@ const DATA = {
         {
             "name": "Sweden",
             "stats": {
-                "cases": 1674,
+                "cases": 1746,
                 "deaths": 20,
                 "recovered": "-"
             },
@@ -2751,7 +2755,7 @@ const DATA = {
                     "date": "2020-03-14"
                 },
                 {
-                    "cases": 300,
+                    "cases": 298,
                     "date": "2020-03-15"
                 },
                 {
@@ -2759,15 +2763,15 @@ const DATA = {
                     "date": "2020-03-16"
                 },
                 {
-                    "cases": 454,
+                    "cases": 453,
                     "date": "2020-03-17"
                 },
                 {
-                    "cases": 567,
+                    "cases": 566,
                     "date": "2020-03-18"
                 },
                 {
-                    "cases": 709,
+                    "cases": 708,
                     "date": "2020-03-19"
                 },
                 {
@@ -2775,7 +2779,7 @@ const DATA = {
                     "date": "2020-03-20"
                 },
                 {
-                    "cases": 1065,
+                    "cases": 1069,
                     "date": "2020-03-21"
                 }
             ]
