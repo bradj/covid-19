@@ -104,7 +104,6 @@ function hover(svg, path) {
 
     for (let s of DATA_WITH_DATES) {
       if (!s.values.length) {
-        console.log(s);
         continue
       }
 
