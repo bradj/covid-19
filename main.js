@@ -70,7 +70,7 @@ const bisectDate = d3.bisector(function(d) {
 function hover(svg, path) {
 
   if ("ontouchstart" in document) {
-    svg.style("-webkit-tap-highlight-color", "transparent")
+    svg
       .on("touchmove", moved)
       .on("touchstart", entered)
       .on("touchend", left);
@@ -97,8 +97,16 @@ function hover(svg, path) {
   function moved() {
     d3.event.preventDefault();
 
-    const cases_coord = y.invert(d3.event.layerY);
-    const date_coord = x.invert(d3.event.layerX);
+    const evt = d3.event;
+    let cases_coord, date_coord;
+
+    if (evt.type === 'touchmove') {
+      cases_coord = y.invert(evt.touches[0].clientY - 60);
+      date_coord = x.invert(evt.touches[0].clientX);
+    } else {
+      cases_coord = y.invert(d3.event.layerY);
+      date_coord = x.invert(d3.event.layerX);
+    }
 
     let mouse_line_deltas = [];
 
