@@ -3,7 +3,7 @@
 ## About
 
 I am scraping the [2019–20 coronavirus pandemic by country and territory
-](https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic_by_country_and_territory) page to get a list of countries with `> 1000` cases. I use the list of countries to query each country page which gives me timeline data. This process is seen in [scrape.py](covid-19/scrape.py).
+](https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic_by_country_and_territory) page to get a list of countries with `> 1000` cases. I use the list of countries to query each country page which gives me timeline data. This process is seen in [scrape.py](covid_19/scrape.py).
 
 All of the data is [here](data.js).
 
