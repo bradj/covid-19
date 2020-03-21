@@ -105,6 +105,7 @@ for url, name, data in countries:
         result = parse_country_stats(requests.get('%s%s' % (url_prefix, url)).text, name)
     except Exception as ex:
         print(name, ex)
+        continue
 
     if result:
         result['stats'] = data
@@ -115,6 +116,10 @@ for s in series:
     for v in s['values']:
         dates.append(v['date'])
 
-output = {'series': series, 'dates': sorted(list(set(dates)))}
+output = {
+    'series': series,
+    'dates': sorted(list(set(dates))),
+    'updated': str(datetime.utcnow())
+}
 
 print('const DATA = %s;' % json.dumps(output, indent=4, sort_keys=True))

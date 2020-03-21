@@ -910,7 +910,7 @@ const DATA = {
         {
             "name": "United States",
             "stats": {
-                "cases": 19861,
+                "cases": 19957,
                 "deaths": 276,
                 "recovered": 147
             },
@@ -1494,7 +1494,7 @@ const DATA = {
         {
             "name": "United Kingdom",
             "stats": {
-                "cases": 4014,
+                "cases": 4000,
                 "deaths": 178,
                 "recovered": 81
             },
@@ -2565,7 +2565,7 @@ const DATA = {
                     "date": "2020-03-19"
                 },
                 {
-                    "cases": 1052,
+                    "cases": 1055,
                     "date": "2020-03-20"
                 }
             ]
@@ -2775,11 +2775,11 @@ const DATA = {
                     "date": "2020-03-19"
                 },
                 {
-                    "cases": 874,
+                    "cases": 875,
                     "date": "2020-03-20"
                 },
                 {
-                    "cases": 1069,
+                    "cases": 1071,
                     "date": "2020-03-21"
                 }
             ]
@@ -2998,5 +2998,6 @@ const DATA = {
                 }
             ]
         }
-    ]
+    ],
+    "updated": "2020-03-21 15:12:39.280632"
 };
