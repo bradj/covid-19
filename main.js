@@ -103,25 +103,30 @@ function hover(svg, path) {
     let mouse_line_deltas = [];
 
     for (let s of DATA_WITH_DATES) {
-        let i1 = bisectDate(s.values, date_coord);
-        let i0 = i1 - 1;
+      if (!s.values.length) {
+        console.log(s);
+        continue
+      }
 
-        if (i0 < 0 || i1 < 0) {
-            i0 = 0;
-            i1 = 1;
-        } else if (i0 >= s.values.length || i1 >= s.values.length) {
-            i0 = s.values.length - 2;
-            i1 = i0 + 1;
-        }
+      let i1 = bisectDate(s.values, date_coord);
+      let i0 = i1 - 1;
 
-        const i = date_coord - s.values[i0].date > s.values[i1].date - date_coord ? i1 : i0;
+      if (i0 < 0 || i1 < 0) {
+          i0 = 0;
+          i1 = 1;
+      } else if (i0 >= s.values.length || i1 >= s.values.length) {
+          i0 = s.values.length - 2;
+          i1 = i0 + 1;
+      }
 
-        mouse_line_deltas.push({
-            country: s,
-            diff: Math.abs(s.values[i].cases - cases_coord),
-            cases: Math.round(s.values[i].cases),
-            idx: i
-        });
+      const i = date_coord - s.values[i0].date > s.values[i1].date - date_coord ? i1 : i0;
+
+      mouse_line_deltas.push({
+          country: s,
+          diff: Math.abs(s.values[i].cases - cases_coord),
+          cases: Math.round(s.values[i].cases),
+          idx: i
+      });
     }
 
     // Finds the closes country

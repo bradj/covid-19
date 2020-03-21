@@ -5,11 +5,23 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
+url_prefix = 'https://en.wikipedia.org'
+
+
+def str_to_int(s):
+    s = re.sub(r'[\s|,]', '', s)
+    return int(s.encode('ascii', 'ignore'))
+
 
 def parse_country_stats(html, country):
     soup = BeautifulSoup(html, features='html.parser')
 
-    trs = soup.find("div", class_='barbox tright').find('tbody').find_all('tr')
+    table = soup.find("div", class_='barbox tright')
+
+    if not table:
+        return None
+
+    trs = table.find('tbody').find_all('tr')
 
     data = {'name': country}
     values = []
@@ -31,29 +43,72 @@ def parse_country_stats(html, country):
 
         cases = tds[2].text.strip()
         cases = cases if cases else tds[3].text.strip()  # Special case to parse China's table
-        cases = cases[:cases.find('(')]
+        cases = cases if cases.find('(') == -1 else cases[:cases.find('(')]
+        cases = str_to_int(cases)
 
-        values.append({'date': str(dt.date()), 'cases': int(cases.replace(',', ''))})
+        values.append({'date': str(dt.date()), 'cases': cases})
 
     data['values'] = values
 
     return data
 
 
-countries = [(f'https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Germany', 'Germany'),
-             (f'https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Italy', 'Italy'),
-             (f'https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic_in_mainland_China', 'China'),
-             (f'https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Spain', 'Spain'),
-             (f'https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Iran', 'Iran'),
-             (f'https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_France', 'France'),
-             (f'https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_South_Korea', 'South_Korea'),
-             (f'https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_the_United_States', 'United_States')]
+def get_countries():
+    html = requests.get(f'https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic').text
+    soup = BeautifulSoup(html, features='html.parser')
 
+    d = soup.find('div', attrs={'id': 'covid19-container'})
+
+    tbody = d.find('tbody')
+    trs = tbody.find_all('tr')
+
+    urls = []
+
+    for tr in trs:
+        ths = tr.find_all('th')
+
+        if (len(ths) != 2):
+            continue
+
+        a = ths[1].find('a')
+        txt = ''
+        for child in a.children:
+            if child.name == 'span':
+                txt = '%s %s' % (txt, child.contents[0])
+            else:
+                txt = child
+
+        tds = tr.find_all('td')
+        data = {
+            'cases': str_to_int(tds[0].string) if tds[0].string else '-',
+            'deaths': str_to_int(tds[1].string) if tds[1].string else '-',
+            'recovered': str_to_int(tds[2].string) if tds[2].string else '-',
+        }
+
+        urls.append((a['href'], txt, data))
+
+    return(urls)
+
+
+countries = get_countries()
+
+# country = '/wiki/2020_coronavirus_pandemic_in_Switzerland'
+# countries = [(country, 'Test Country')]
 
 series = []
 
-for url, name in countries:
-    series.append(parse_country_stats(requests.get(url).text, name))
+for url, name, data in countries:
+    if data['cases'] < 1000:
+        continue
+
+    try:
+        result = parse_country_stats(requests.get('%s%s' % (url_prefix, url)).text, name)
+    except Exception as ex:
+        print(name, ex)
+
+    if result:
+        result['stats'] = data
+        series.append(result)
 
 dates = []
 for s in series:
