@@ -162,4 +162,4 @@ function hover(svg, path) {
 svg.call(hover, path);
 
 document.getElementById('svg').appendChild(svg.node());
-document.getElementById('updated').innerText = `Updated: ${DATA.updated}`;
+document.getElementById('updated').innerText = `Updated: ${DATA.updated} UTC`;
