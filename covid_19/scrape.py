@@ -1,4 +1,4 @@
-from datetime import datetime
+import datetime
 import json
 import re
 
@@ -115,6 +115,10 @@ for s in series:
     for v in s['values']:
         dates.append(v['date'])
 
-output = {'series': series, 'dates': sorted(list(set(dates)))}
+output = {
+    'series': series,
+    'dates': sorted(list(set(dates))),
+    'updated': datetime.datetime.utcnow()
+}
 
 print('const DATA = %s;' % json.dumps(output, indent=4, sort_keys=True))

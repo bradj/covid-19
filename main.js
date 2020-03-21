@@ -161,4 +161,5 @@ function hover(svg, path) {
 
 svg.call(hover, path);
 
-document.body.appendChild(svg.node());
+document.getElementById('svg').appendChild(svg.node());
+document.getElementById('updated').innerText = `Updated: ${DATA.updated}`;
