@@ -649,8 +649,8 @@ const DATA = {
         {
             "name": "United States",
             "stats": {
-                "cases": 38221,
-                "deaths": 396,
+                "cases": 38813,
+                "deaths": 400,
                 "largest_increase": {
                     "date": "2020-03-21",
                     "increase": 6271
@@ -839,7 +839,7 @@ const DATA = {
                     "increase": 6271
                 },
                 {
-                    "cases": 28521,
+                    "cases": 38813,
                     "date": "2020-03-22",
                     "increase": 4812
                 }
@@ -1167,7 +1167,7 @@ const DATA = {
                     "increase": 2705
                 },
                 {
-                    "cases": 18610,
+                    "cases": 24809,
                     "date": "2020-03-22",
                     "increase": 1948
                 }
@@ -1493,6 +1493,11 @@ const DATA = {
                     "cases": 14459,
                     "date": "2020-03-21",
                     "increase": 1847
+                },
+                {
+                    "cases": 14459,
+                    "date": "2020-03-22",
+                    "increase": 1559
                 }
             ]
         },
@@ -1913,7 +1918,7 @@ const DATA = {
                     "increase": 1481
                 },
                 {
-                    "cases": 6747,
+                    "cases": 7014,
                     "date": "2020-03-21",
                     "increase": 1378
                 }
@@ -2077,7 +2082,7 @@ const DATA = {
                     "increase": 1035
                 },
                 {
-                    "cases": 5683,
+                    "cases": 5037,
                     "date": "2020-03-22",
                     "increase": 665
                 }
@@ -2216,7 +2221,7 @@ const DATA = {
                     "increase": 637
                 },
                 {
-                    "cases": 4204,
+                    "cases": 4216,
                     "date": "2020-03-22",
                     "increase": 573
                 }
@@ -2474,7 +2479,7 @@ const DATA = {
                     "increase": 426
                 },
                 {
-                    "cases": 3244,
+                    "cases": 3026,
                     "date": "2020-03-22",
                     "increase": 430
                 }
@@ -2613,7 +2618,7 @@ const DATA = {
                     "increase": 190
                 },
                 {
-                    "cases": 1926,
+                    "cases": 2256,
                     "date": "2020-03-21",
                     "increase": 184
                 }
@@ -2757,7 +2762,7 @@ const DATA = {
                     "increase": 200
                 },
                 {
-                    "cases": 1770,
+                    "cases": 1925,
                     "date": "2020-03-21",
                     "increase": 131
                 }
@@ -3073,7 +3078,7 @@ const DATA = {
                     "increase": 209
                 },
                 {
-                    "cases": 1281,
+                    "cases": 1378,
                     "date": "2020-03-21",
                     "increase": 226
                 }
@@ -3347,7 +3352,7 @@ const DATA = {
                     "increase": 196
                 },
                 {
-                    "cases": 1352,
+                    "cases": 1356,
                     "date": "2020-03-22",
                     "increase": 281
                 }
@@ -3710,7 +3715,7 @@ const DATA = {
                     "increase": 343
                 },
                 {
-                    "cases": 1178,
+                    "cases": 1201,
                     "date": "2020-03-21",
                     "increase": 214
                 }
@@ -4103,12 +4108,12 @@ const DATA = {
                     "increase": 36
                 },
                 {
-                    "cases": 1007,
+                    "cases": 1086,
                     "date": "2020-03-20",
                     "increase": 57
                 }
             ]
         }
     ],
-    "updated": "2020-03-22 18:12:14.768374"
+    "updated": "2020-03-22 18:58:26.974625"
 };

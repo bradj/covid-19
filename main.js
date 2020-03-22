@@ -101,8 +101,8 @@ function hover(svg, path) {
     let cases_coord, date_coord;
 
     if (evt.type === 'touchmove') {
-      cases_coord = y.invert(evt.touches[0].clientY - 60);
-      date_coord = x.invert(evt.touches[0].clientX);
+      cases_coord = y.invert(evt.touches[0].clientY - margin.top - 40);
+      date_coord = x.invert(evt.touches[0].clientX + (margin.left / 2));
     } else {
       cases_coord = y.invert(evt.layerY - margin.top);
       date_coord = x.invert(evt.layerX + (margin.left / 2));

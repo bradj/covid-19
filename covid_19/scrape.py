@@ -126,9 +126,20 @@ for url, name, data in countries:
         print(name, ex)
         continue
 
-    if result:
-        result['stats'] = {**data, **stats}
-        series.append(result)
+    if not result:
+        continue
+
+    # Sometimes the country specific pages take longer than the global page to receive updates
+    # Because of this, I am replacing the last country specific case count with the case count
+    # from the global pandemic page.
+    #
+    # I might have to remove this at some point since it's a bit hacky but for now
+    # it solves a problem so w/e.
+    if len(result['values']) > 0 and result['values'][-1]['cases'] != data['cases']:
+        result['values'][-1]['cases'] = data['cases']
+
+    result['stats'] = {**data, **stats}
+    series.append(result)
 
 dates = []
 for s in series:
