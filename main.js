@@ -13,7 +13,7 @@ const DATA_WITH_DATES = DATA.series.map(d => {
 
 const width = document.body.clientWidth;
 const margin = ({top: 30, right: 40, bottom: 30, left: 40});
-const height = 500;
+const height = 600;
 
 const x = d3.scaleUtc()
     .domain(d3.extent(CONVERTED_DATES, d => d))
@@ -21,7 +21,7 @@ const x = d3.scaleUtc()
 
 const xAxis = g => g
     .attr("transform", `translate(0,${height - margin.bottom})`)
-    .call(d3.axisBottom(x).ticks(width / 80).tickSizeOuter(0));
+    .call(d3.axisBottom(x).ticks(width / 70).tickSizeOuter(0));
 
 const y = d3.scaleLinear()
     .domain([0, d3.max(DATA_WITH_DATES, d => d3.max(d.values, d_sub => d_sub.cases))]).nice()
@@ -92,7 +92,7 @@ function hover(svg, path) {
       .attr("font-family", "sans-serif")
       .attr("font-size", 10)
       .attr("text-anchor", "middle")
-      .attr("y", -8);
+      .attr("y", -15);
 
   function moved() {
     d3.event.preventDefault();
@@ -104,8 +104,8 @@ function hover(svg, path) {
       cases_coord = y.invert(evt.touches[0].clientY - 60);
       date_coord = x.invert(evt.touches[0].clientX);
     } else {
-      cases_coord = y.invert(d3.event.layerY);
-      date_coord = x.invert(d3.event.layerX);
+      cases_coord = y.invert(evt.layerY - margin.top);
+      date_coord = x.invert(evt.layerX + (margin.left / 2));
     }
 
     let mouse_line_deltas = [];
@@ -161,5 +161,51 @@ function hover(svg, path) {
 
 svg.call(hover, path);
 
+function print_recovered() {
+  let tbody = document.querySelector('tbody');
+
+  for (let d of DATA.series) {
+    let tr = document.createElement('tr');
+
+    let country = document.createElement('td');
+    country.innerText = d.name;
+
+    let cases = document.createElement('td');
+    cases.innerText = d.stats.cases;
+
+    let deaths = document.createElement('td');
+    deaths.innerText = d.stats.deaths;
+
+    let recovered = document.createElement('td');
+    recovered.innerText = d.stats.recovered;
+
+    let largest_increase = document.createElement('td');
+    let increase = '-';
+
+    if (d.stats.largest_increase && d.stats.largest_increase.increase) {
+      let li = d.stats.largest_increase;
+      let then = new Date(li.date);
+      let now = new Date();
+
+      // ms to days
+      let days = Math.round((now - then) / 1000 / 60 / 60 / 24);
+
+      increase = `<strong>${li.increase}</strong> cases <strong>${days}</strong> day${days > 1 ? 's' : ''} ago`
+    }
+
+    largest_increase.innerHTML = increase;
+
+    tr.appendChild(country);
+    tr.appendChild(cases);
+    tr.appendChild(recovered);
+    tr.appendChild(deaths);
+    tr.appendChild(largest_increase);
+
+    tbody.appendChild(tr);
+  }
+}
+
 document.getElementById('svg').appendChild(svg.node());
 document.getElementById('updated').innerText = `Updated: ${DATA.updated} UTC`;
+
+print_recovered();

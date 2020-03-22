@@ -24,6 +24,8 @@ def parse_country_stats(html, country):
     trs = table.find('tbody').find_all('tr')
 
     data = {'name': country}
+    prev_total = 0
+    largest_increase = {'increase': 0, 'date': None}
     values = []
 
     for tr in trs:
@@ -46,11 +48,23 @@ def parse_country_stats(html, country):
         cases = cases if cases.find('(') == -1 else cases[:cases.find('(')]
         cases = str_to_int(cases)
 
-        values.append({'date': str(dt.date()), 'cases': cases})
+        increase = cases - prev_total
+
+        if increase > largest_increase['increase']:
+            largest_increase['increase'] = increase
+            largest_increase['date'] = str(dt.date())
+
+        values.append({
+            'date': str(dt.date()),
+            'cases': cases,
+            'increase': increase,
+        })
+
+        prev_total = cases
 
     data['values'] = values
 
-    return data
+    return (data, {'largest_increase': largest_increase})
 
 
 def get_countries():
@@ -85,6 +99,11 @@ def get_countries():
             'recovered': str_to_int(tds[2].string) if tds[2].string else '-',
         }
 
+        # since the table is in decreasing order we can
+        # stop parsing once we hit < 1000 cases
+        if data['cases'] < 1000:
+            break
+
         urls.append((a['href'], txt, data))
 
     return(urls)
@@ -102,13 +121,13 @@ for url, name, data in countries:
         continue
 
     try:
-        result = parse_country_stats(requests.get('%s%s' % (url_prefix, url)).text, name)
+        result, stats = parse_country_stats(requests.get('%s%s' % (url_prefix, url)).text, name)
     except Exception as ex:
         print(name, ex)
         continue
 
     if result:
-        result['stats'] = data
+        result['stats'] = {**data, **stats}
         series.append(result)
 
 dates = []
