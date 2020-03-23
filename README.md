@@ -1,5 +1,7 @@
 # COVID-19
 
+[View Live Version Here](https://bradj.github.io/covid-19/)
+
 ## About
 
 I am scraping the [2019–20 coronavirus pandemic by country and territory

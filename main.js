@@ -1,4 +1,4 @@
-const CONVERTED_DATES = DATA.dates.map(d3.utcParse("%Y-%m-%d"))
+const CONVERTED_DATES = DATA.dates.slice(DATA.dates.indexOf('2020-02-20')).map(d3.utcParse("%Y-%m-%d"))
 const DATA_WITH_DATES = DATA.series.map(d => {
     return {
         name: d.name,
