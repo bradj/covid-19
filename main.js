@@ -11,6 +11,7 @@ const DATA_WITH_DATES = DATA.series.map(d => {
     }
 });
 
+let hidden_layers = {};
 const width = document.body.clientWidth;
 const margin = ({top: 30, right: 40, bottom: 30, left: 40});
 const height = 600;
@@ -154,12 +155,84 @@ function hover(svg, path) {
   }
 
   function left() {
-    path.style("mix-blend-mode", "multiply").attr("stroke", null);
+    path.attr("stroke", d => d.name in hidden_layers ? "#ddd" : "steelblue");
     dot.attr("display", "none");
   }
 }
 
 svg.call(hover, path);
+
+function hide_paths() {
+  path.style("mix-blend-mode", null)
+}
+
+function show_layer(name) {
+  delete hidden_layers[name];
+  path.attr("stroke", d => d.name in hidden_layers ? "#ddd" : "steelblue");
+}
+
+function hide_layer(name) {
+  hidden_layers[name] = true;
+  path.attr("stroke", d => d.name in hidden_layers ? "#ddd" : "steelblue");
+}
+
+function print_layer_toggle() {
+  let container = document.getElementById('toggle');
+  let buttons = [];
+
+  for (let country of DATA.series) {
+    if (!country.values) {
+      continue;
+    }
+
+    let btn = document.createElement('button');
+    btn.classList.add('button');
+    btn.classList.add('is-info');
+    btn.innerText = country.name;
+
+    btn.addEventListener('click', (evt) => {
+      evt.target.classList.toggle('is-light');
+
+      if (evt.target.classList.contains('is-light')) {
+        // layer is hidden
+        hide_layer(country.name);
+      } else {
+        // layer is visible
+        show_layer(country.name);
+      }
+    });
+
+    container.appendChild(btn);
+    buttons.push(btn);
+  }
+
+  let toggle_all = document.getElementById('toggle-all');
+
+  toggle_all.addEventListener('click', (evt) => {
+    evt.target.classList.toggle('is-light');
+
+    if (evt.target.classList.contains('is-light')) {
+      // all are hidden
+      for (let country of DATA.series) {
+        hidden_layers[country.name] = true;
+      }
+
+      for (let btn of buttons) {
+        btn.classList.add('is-light');
+      }
+
+      hide_layer(DATA.series[0].name);
+    } else {
+      // all are visible
+      for (let btn of buttons) {
+        btn.classList.remove('is-light');
+      }
+
+      hidden_layers = {'temp': true};
+      show_layer('temp');
+    }
+  });
+}
 
 function print_recovered() {
   let tbody = document.querySelector('tbody');
@@ -209,3 +282,4 @@ document.getElementById('svg').appendChild(svg.node());
 document.getElementById('updated').innerText = `Updated: ${DATA.updated} UTC`;
 
 print_recovered();
+print_layer_toggle();
