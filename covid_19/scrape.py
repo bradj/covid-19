@@ -9,7 +9,7 @@ url_prefix = 'https://en.wikipedia.org'
 
 
 def str_to_int(s):
-    s = re.sub(r'[\s|,]', '', s)
+    s = re.sub(r'[\D]', '', s)
     return int(s.encode('ascii', 'ignore'))
 
 
@@ -44,7 +44,7 @@ def parse_country_stats(html, country):
             continue
 
         cases = tds[2].text.strip()
-        cases = cases if cases else tds[3].text.strip()  # Special case to parse China's table
+        cases = cases if cases else tds[3].text.strip()
         cases = cases if cases.find('(') == -1 else cases[:cases.find('(')]
         cases = str_to_int(cases)
 

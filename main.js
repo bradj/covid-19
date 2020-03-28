@@ -168,7 +168,7 @@ function hide_paths() {
 
 function show_layer(name) {
   delete hidden_layers[name];
-  path.attr("stroke", d => d.name in hidden_layers ? "#ddd" : "steelblue");
+  path.attr("stroke", d => d.name in hidden_layers ? "#ddd" : "steelblue").raise();
 }
 
 function hide_layer(name) {
@@ -261,9 +261,9 @@ function print_recovered() {
       let now = new Date();
 
       // ms to days
-      let days = Math.round((now - then) / 1000 / 60 / 60 / 24);
+      let days = Math.round(((now - then) / 1000 / 60 / 60 / 24) - 1);
 
-      increase = `<strong>${li.increase}</strong> cases <strong>${days}</strong> day${days > 1 ? 's' : ''} ago`
+      increase = `<strong>${li.increase}</strong> cases <strong>${days}</strong> day${days > 1 || days === 0 ? 's' : ''} ago`
     }
 
     largest_increase.innerHTML = increase;
