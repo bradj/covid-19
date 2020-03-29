@@ -1,7 +1,7 @@
 class Graph {
   constructor(date_list, data) {
     this.width = document.body.clientWidth;
-    this.margin = ({top: 10, right: 40, bottom: 20, left: 50});
+    this.margin = ({top: 20, right: 40, bottom: 20, left: 50});
     this.height = 600;
 
     this.date_list = date_list;
