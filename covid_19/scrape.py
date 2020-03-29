@@ -154,14 +154,12 @@ def get_states():
             })
 
     states['dates'] = sorted(list(set(dates)))
+    states['series'] = sorted(states['series'], key=lambda state: state['stats']['total'], reverse=True)
 
     return states
 
 
 countries = get_countries()
-
-# country = '/wiki/2020_coronavirus_pandemic_in_Switzerland'
-# countries = [(country, 'Test Country')]
 
 series = []
 
@@ -201,5 +199,5 @@ output = {
     'updated': str(datetime.utcnow())
 }
 
-print('const DATA = %s;' % json.dumps(output, indent=4, sort_keys=True))
-print('const STATES = %s;' % json.dumps(get_states(), indent=4, sort_keys=True))
+print('const DATA = %s;' % json.dumps(output))
+print('const STATES = %s;' % json.dumps(get_states()))

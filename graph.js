@@ -1,7 +1,7 @@
 class Graph {
   constructor(date_list, data) {
     this.width = document.body.clientWidth;
-    this.margin = ({top: 30, right: 40, bottom: 30, left: 40});
+    this.margin = ({top: 10, right: 40, bottom: 20, left: 50});
     this.height = 600;
 
     this.hidden_layers = {};
@@ -77,11 +77,11 @@ class Graph {
     let cases_coord, date_coord;
 
     if (evt.type === 'touchmove') {
-      cases_coord = this.y.invert(evt.touches[0].clientY - this.margin.top - 40);
+      cases_coord = this.y.invert(evt.touches[0].clientY - this.margin.top - 170);
       date_coord = this.x.invert(evt.touches[0].clientX + (this.margin.left / 2));
     } else {
-      cases_coord = this.y.invert(evt.layerY - this.margin.top);
-      date_coord = this.x.invert(evt.layerX + (this.margin.left / 2));
+      cases_coord = this.y.invert(evt.clientY - this.margin.top - 150);
+      date_coord = this.x.invert(evt.clientX);
     }
 
     let mouse_line_deltas = [];
@@ -159,5 +159,84 @@ class Graph {
         .attr("font-size", 10)
         .attr("text-anchor", "middle")
         .attr("y", -15);
+  }
+
+  print_layer_toggle(series, container) {
+    const btn_list = document.createElement('div');
+    btn_list.classList.add('buttons', 'has-addons', 'are-small', 'is-centered');
+
+    const toggler = document.createElement('div');
+    toggler.classList.add('buttons', 'are-small', 'is-centered');
+
+    const toggle_all_btn = document.createElement('button');
+    toggle_all_btn.classList.add('button', 'is-info');
+    toggle_all_btn.innerText = 'Toggle All';
+    toggler.appendChild(toggle_all_btn);
+
+    let buttons = [];
+
+    for (let item of series) {
+      if (!item.values) {
+        continue;
+      }
+
+      let btn = document.createElement('button');
+      btn.classList.add('button');
+      btn.classList.add('is-info');
+      btn.innerText = item.name;
+
+      btn.addEventListener('click', (evt) => {
+        evt.target.classList.toggle('is-light');
+
+        if (evt.target.classList.contains('is-light')) {
+          // layer is hidden
+          this.hide_layer(item.name);
+        } else {
+          // layer is visible
+          this.show_layer(item.name);
+        }
+      });
+
+      btn_list.appendChild(btn);
+      buttons.push(btn);
+    }
+
+    toggle_all_btn.addEventListener('click', (evt) => {
+      evt.target.classList.toggle('is-light');
+
+      if (evt.target.classList.contains('is-light')) {
+        // all are hidden
+        for (let item of series) {
+          this.hidden_layers[item.name] = true;
+        }
+
+        for (let btn of buttons) {
+          btn.classList.add('is-light');
+        }
+
+        this.hide_layer(series[0].name);
+      } else {
+        // all are visible
+        for (let btn of buttons) {
+          btn.classList.remove('is-light');
+        }
+
+        this.hidden_layers = {'temp': true};
+        this.show_layer('temp');
+      }
+    });
+
+    container.appendChild(btn_list);
+    container.appendChild(toggler);
+  }
+
+  show_layer(name) {
+    delete this.hidden_layers[name];
+    this.path.attr("stroke", d => d.name in this.hidden_layers ? "#ddd" : "steelblue");
+  }
+
+  hide_layer(name) {
+    this.hidden_layers[name] = true;
+    this.path.attr("stroke", d => d.name in this.hidden_layers ? "#ddd" : "steelblue");
   }
 }
