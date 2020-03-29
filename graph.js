@@ -4,8 +4,6 @@ class Graph {
     this.margin = ({top: 10, right: 40, bottom: 20, left: 50});
     this.height = 600;
 
-    this.hidden_layers = {};
-
     this.date_list = date_list;
     this.data = data;
 
@@ -46,7 +44,7 @@ class Graph {
     this.svg.call(this.hover.bind(this), this.path);
   }
 
-  get svg_node() {
+  get node() {
     return this.svg.node();
   }
 
@@ -130,7 +128,7 @@ class Graph {
   }
 
   left() {
-    this.path.attr("stroke", d => d.name in this.hidden_layers ? "#ddd" : "steelblue");
+    this.path.attr("stroke", "steelblue");
     this.dot.attr("display", "none");
   }
 
@@ -159,84 +157,5 @@ class Graph {
         .attr("font-size", 10)
         .attr("text-anchor", "middle")
         .attr("y", -15);
-  }
-
-  print_layer_toggle(series, container) {
-    const btn_list = document.createElement('div');
-    btn_list.classList.add('buttons', 'has-addons', 'are-small', 'is-centered');
-
-    const toggler = document.createElement('div');
-    toggler.classList.add('buttons', 'are-small', 'is-centered');
-
-    const toggle_all_btn = document.createElement('button');
-    toggle_all_btn.classList.add('button', 'is-info');
-    toggle_all_btn.innerText = 'Toggle All';
-    toggler.appendChild(toggle_all_btn);
-
-    let buttons = [];
-
-    for (let item of series) {
-      if (!item.values) {
-        continue;
-      }
-
-      let btn = document.createElement('button');
-      btn.classList.add('button');
-      btn.classList.add('is-info');
-      btn.innerText = item.name;
-
-      btn.addEventListener('click', (evt) => {
-        evt.target.classList.toggle('is-light');
-
-        if (evt.target.classList.contains('is-light')) {
-          // layer is hidden
-          this.hide_layer(item.name);
-        } else {
-          // layer is visible
-          this.show_layer(item.name);
-        }
-      });
-
-      btn_list.appendChild(btn);
-      buttons.push(btn);
-    }
-
-    toggle_all_btn.addEventListener('click', (evt) => {
-      evt.target.classList.toggle('is-light');
-
-      if (evt.target.classList.contains('is-light')) {
-        // all are hidden
-        for (let item of series) {
-          this.hidden_layers[item.name] = true;
-        }
-
-        for (let btn of buttons) {
-          btn.classList.add('is-light');
-        }
-
-        this.hide_layer(series[0].name);
-      } else {
-        // all are visible
-        for (let btn of buttons) {
-          btn.classList.remove('is-light');
-        }
-
-        this.hidden_layers = {'temp': true};
-        this.show_layer('temp');
-      }
-    });
-
-    container.appendChild(btn_list);
-    container.appendChild(toggler);
-  }
-
-  show_layer(name) {
-    delete this.hidden_layers[name];
-    this.path.attr("stroke", d => d.name in this.hidden_layers ? "#ddd" : "steelblue");
-  }
-
-  hide_layer(name) {
-    this.hidden_layers[name] = true;
-    this.path.attr("stroke", d => d.name in this.hidden_layers ? "#ddd" : "steelblue");
   }
 }

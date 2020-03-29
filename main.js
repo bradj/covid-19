@@ -41,17 +41,17 @@ function clear() {
 function show_world() {
     clear();
 
-    svg_el.appendChild(world.svg_node);
+    svg_el.appendChild(world.node);
     print_world_table(table);
-    world.print_layer_toggle(DATA.series, layer_toggles);
+    print_layer_toggle(COUNTRY_DATES, COUNTRY_DATA, world.node, layer_toggles, svg_el);
 }
 
 function show_us() {
     clear();
 
-    svg_el.appendChild(states.svg_node);
+    svg_el.appendChild(states.node);
     print_states_table(table);
-    states.print_layer_toggle(STATES.series, layer_toggles);
+    print_layer_toggle(STATES_DATES, STATES_DATA, states.node, layer_toggles, svg_el);
 }
 
 toggle_world.addEventListener('click', (evt) => {
