@@ -162,10 +162,6 @@ function hover(svg, path) {
 
 svg.call(hover, path);
 
-function hide_paths() {
-  path.style("mix-blend-mode", null)
-}
-
 function show_layer(name) {
   delete hidden_layers[name];
   path.attr("stroke", d => d.name in hidden_layers ? "#ddd" : "steelblue");
