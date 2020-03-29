@@ -109,10 +109,57 @@ def get_countries():
     return(urls)
 
 
-countries = get_countries()
+def get_states():
+    states = {
+        'dates': [],
+        'series': []
+    }
 
-# country = '/wiki/2020_coronavirus_pandemic_in_Switzerland'
-# countries = [(country, 'Test Country')]
+    r = requests.get('https://covidtracking.com/api/states/daily')
+
+    response = r.json()
+    dates = []
+
+    for idx, i in enumerate(response):
+        date = str(i['date'])
+        response[idx]['date'] = f'{date[:4]}-{date[4:6]}-{date[-2:]}'
+
+        dates.append(i['date'])
+
+        found = False
+        for state in states['series']:
+            if state['name'] != i['state']:
+                continue
+
+            found = True
+            state['values'].insert(0, i)
+
+            if 'positiveIncrease' not in i or i['positiveIncrease'] is None:
+                continue
+
+            if state['stats']['largest_increase']['increase'] < i['positiveIncrease']:
+                state['stats']['largest_increase']['increase'] = i['positiveIncrease']
+                state['stats']['largest_increase']['date'] = i['date']
+
+        if not found:
+            states['series'].append({
+                'name': i['state'],
+                'stats': {**i,
+                          'largest_increase': {
+                              'increase': i['positiveIncrease'],
+                              'date': i['date']
+                          }
+                          },
+                'values': [i]
+            })
+
+    states['dates'] = sorted(list(set(dates)))
+    states['series'] = sorted(states['series'], key=lambda state: state['stats']['total'], reverse=True)
+
+    return states
+
+
+countries = get_countries()
 
 series = []
 
@@ -152,4 +199,5 @@ output = {
     'updated': str(datetime.utcnow())
 }
 
-print('const DATA = %s;' % json.dumps(output, indent=4, sort_keys=True))
+print('const DATA = %s;' % json.dumps(output))
+print('const STATES = %s;' % json.dumps(get_states()))
