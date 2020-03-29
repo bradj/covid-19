@@ -17,7 +17,7 @@ const STATES_DATA = STATES.series.map(d => {
       name: d.name,
       values: d.values.map(v => {
           return {
-              cases: v.total,
+              cases: v.positive,
               date: d3.utcParse("%Y-%m-%d")(v.date)
           };
       })

@@ -154,7 +154,7 @@ def get_states():
             })
 
     states['dates'] = sorted(list(set(dates)))
-    states['series'] = sorted(states['series'], key=lambda state: state['stats']['total'], reverse=True)
+    states['series'] = sorted(states['series'], key=lambda state: state['stats']['positive'], reverse=True)
 
     return states
 
