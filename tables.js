@@ -145,3 +145,72 @@ function print_states_table(table) {
     table.appendChild(tbody);
   }
 }
+
+function print_layer_toggle(dates, series, ALL_NODE, container, svg_el) {
+  const btn_list = document.createElement('div');
+  btn_list.classList.add('buttons', 'has-addons', 'are-small', 'is-centered');
+
+  const toggler = document.createElement('div');
+  toggler.classList.add('buttons', 'are-small', 'is-centered');
+
+  const show_all_btn = document.createElement('button');
+  show_all_btn.classList.add('button', 'is-info');
+  show_all_btn.innerText = 'Show All';
+  toggler.appendChild(show_all_btn);
+
+  let buttons = [];
+
+  series.forEach((item, idx) => {
+    if (!item.values) {
+      return;
+    }
+
+    let btn = document.createElement('button');
+    btn.classList.add('button', 'is-info', 'is-light');
+    btn.dataset.idx = idx;
+    btn.innerText = item.name;
+
+    btn.addEventListener('click', (evt) => {
+      if (!evt.target.classList.contains('is-light')) {
+        return;
+      }
+
+      show_all_btn.classList.add('is-light');
+
+      // set all other buttons to is-light
+      for (let b of buttons) {
+        b.classList.add('is-light');
+      }
+
+      btn.classList.remove('is-light');
+
+      // create svg
+      const svg = new Graph(dates, [series[parseInt(btn.dataset.idx)]]);
+      // set SVG
+      svg_el.innerHTML = '';
+      svg_el.appendChild(svg.node);
+    });
+
+    btn_list.appendChild(btn);
+    buttons.push(btn);
+  });
+
+  show_all_btn.addEventListener('click', (evt) => {
+    if (!show_all_btn.classList.contains('is-light')) {
+      return;
+    }
+
+    // show all
+    show_all_btn.classList.remove('is-light');
+
+    for (let btn of buttons) {
+      btn.classList.add('is-light');
+    }
+
+    svg_el.innerHTML = '';
+    svg_el.appendChild(ALL_NODE);
+  });
+
+  container.appendChild(btn_list);
+  container.appendChild(toggler);
+}
