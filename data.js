@@ -78,19 +78,20 @@ const DATA = {
         "2020-03-25",
         "2020-03-26",
         "2020-03-27",
-        "2020-03-28"
+        "2020-03-28",
+        "2020-03-29"
     ],
     "series": [
         {
             "name": "United States",
             "stats": {
-                "cases": 104671,
-                "deaths": 1716,
+                "cases": 124697,
+                "deaths": 2227,
                 "largest_increase": {
-                    "date": "2020-03-27",
-                    "increase": 18456
+                    "date": "2020-03-28",
+                    "increase": 20102
                 },
-                "recovered": 2387
+                "recovered": 3231
             },
             "values": [
                 {
@@ -137,11 +138,6 @@ const DATA = {
                     "cases": 12,
                     "date": "2020-02-05",
                     "increase": 1
-                },
-                {
-                    "cases": 12,
-                    "date": "2020-02-15",
-                    "increase": 0
                 },
                 {
                     "cases": 14,
@@ -299,27 +295,32 @@ const DATA = {
                     "increase": 12231
                 },
                 {
-                    "cases": 81836,
+                    "cases": 81964,
                     "date": "2020-03-26",
-                    "increase": 16920
+                    "increase": 17048
                 },
                 {
-                    "cases": 104671,
+                    "cases": 100997,
                     "date": "2020-03-27",
-                    "increase": 18456
+                    "increase": 19033
+                },
+                {
+                    "cases": 124697,
+                    "date": "2020-03-28",
+                    "increase": 20102
                 }
             ]
         },
         {
             "name": "Italy",
             "stats": {
-                "cases": 86498,
-                "deaths": 9134,
+                "cases": 92472,
+                "deaths": 10023,
                 "largest_increase": {
                     "date": "2020-03-21",
                     "increase": 6557
                 },
-                "recovered": 10950
+                "recovered": 12384
             },
             "values": [
                 {
@@ -503,27 +504,32 @@ const DATA = {
                     "increase": 5210
                 },
                 {
-                    "cases": 80589,
+                    "cases": 80539,
                     "date": "2020-03-26",
-                    "increase": 6203
+                    "increase": 6153
                 },
                 {
                     "cases": 86498,
                     "date": "2020-03-27",
-                    "increase": 5909
+                    "increase": 5959
+                },
+                {
+                    "cases": 92472,
+                    "date": "2020-03-28",
+                    "increase": 5974
                 }
             ]
         },
         {
             "name": "China  (mainland)",
             "stats": {
-                "cases": 81394,
-                "deaths": 3295,
+                "cases": 81439,
+                "deaths": 3300,
                 "largest_increase": {
                     "date": "2020-02-16",
                     "increase": 19457
                 },
-                "recovered": 74971
+                "recovered": 75448
             },
             "values": [
                 {
@@ -910,19 +916,24 @@ const DATA = {
                     "cases": 81394,
                     "date": "2020-03-27",
                     "increase": 54
+                },
+                {
+                    "cases": 81439,
+                    "date": "2020-03-28",
+                    "increase": 45
                 }
             ]
         },
         {
             "name": "Spain",
             "stats": {
-                "cases": 72248,
-                "deaths": 5694,
+                "cases": 78797,
+                "deaths": 6528,
                 "largest_increase": {
                     "date": "2020-03-25",
                     "increase": 8047
                 },
-                "recovered": 12285
+                "recovered": 14709
             },
             "values": [
                 {
@@ -1106,22 +1117,27 @@ const DATA = {
                     "increase": 7933
                 },
                 {
-                    "cases": 72248,
+                    "cases": 73232,
                     "date": "2020-03-28",
-                    "increase": 6529
+                    "increase": 7513
+                },
+                {
+                    "cases": 78797,
+                    "date": "2020-03-29",
+                    "increase": 5565
                 }
             ]
         },
         {
             "name": "Germany",
             "stats": {
-                "cases": 53340,
-                "deaths": 399,
+                "cases": 58349,
+                "deaths": 481,
                 "largest_increase": {
                     "date": "2020-03-28",
                     "increase": 6294
                 },
-                "recovered": 3286
+                "recovered": 4445
             },
             "values": [
                 {
@@ -1290,22 +1306,27 @@ const DATA = {
                     "increase": 5780
                 },
                 {
-                    "cases": 53340,
+                    "cases": 48582,
                     "date": "2020-03-28",
                     "increase": 6294
+                },
+                {
+                    "cases": 58349,
+                    "date": "2020-03-29",
+                    "increase": 3965
                 }
             ]
         },
         {
             "name": "Iran",
             "stats": {
-                "cases": 35408,
-                "deaths": 2517,
+                "cases": 38309,
+                "deaths": 2640,
                 "largest_increase": {
                     "date": "2020-03-28",
                     "increase": 3076
                 },
-                "recovered": 11679
+                "recovered": 12391
             },
             "values": [
                 {
@@ -1499,7 +1520,7 @@ const DATA = {
                     "increase": 2926
                 },
                 {
-                    "cases": 35408,
+                    "cases": 38309,
                     "date": "2020-03-28",
                     "increase": 3076
                 }
@@ -1508,11 +1529,11 @@ const DATA = {
         {
             "name": "France",
             "stats": {
-                "cases": 32964,
-                "deaths": 1995,
+                "cases": 37611,
+                "deaths": 2314,
                 "largest_increase": {
-                    "date": "2020-03-26",
-                    "increase": 3922
+                    "date": "2020-03-28",
+                    "increase": 4611
                 },
                 "recovered": 5700
             },
@@ -1676,14 +1697,19 @@ const DATA = {
                     "cases": 32964,
                     "date": "2020-03-27",
                     "increase": 3809
+                },
+                {
+                    "cases": 37611,
+                    "date": "2020-03-28",
+                    "increase": 4611
                 }
             ]
         },
         {
             "name": "United Kingdom",
             "stats": {
-                "cases": 14590,
-                "deaths": 760,
+                "cases": 17136,
+                "deaths": 1028,
                 "largest_increase": {
                     "date": "2020-03-27",
                     "increase": 2885
@@ -1862,22 +1888,27 @@ const DATA = {
                     "increase": 2129
                 },
                 {
-                    "cases": 14590,
+                    "cases": 14543,
                     "date": "2020-03-27",
                     "increase": 2885
+                },
+                {
+                    "cases": 17136,
+                    "date": "2020-03-28",
+                    "increase": 2546
                 }
             ]
         },
         {
             "name": "Switzerland",
             "stats": {
-                "cases": 13259,
-                "deaths": 241,
+                "cases": 14352,
+                "deaths": 282,
                 "largest_increase": {
                     "date": "2020-03-27",
                     "increase": 1447
                 },
-                "recovered": 1524
+                "recovered": 1595
             },
             "values": [
                 {
@@ -2036,22 +2067,365 @@ const DATA = {
                     "increase": 949
                 },
                 {
-                    "cases": 13259,
+                    "cases": 12161,
                     "date": "2020-03-27",
                     "increase": 1447
+                },
+                {
+                    "cases": 13213,
+                    "date": "2020-03-28",
+                    "increase": 1052
+                },
+                {
+                    "cases": 14352,
+                    "date": "2020-03-29",
+                    "increase": 1123
+                }
+            ]
+        },
+        {
+            "name": "Belgium",
+            "stats": {
+                "cases": 10836,
+                "deaths": 431,
+                "largest_increase": {
+                    "date": "2020-03-28",
+                    "increase": 1850
+                },
+                "recovered": 1359
+            },
+            "values": [
+                {
+                    "cases": 1,
+                    "date": "2020-02-04",
+                    "increase": 1
+                },
+                {
+                    "cases": 2,
+                    "date": "2020-03-01",
+                    "increase": 1
+                },
+                {
+                    "cases": 8,
+                    "date": "2020-03-02",
+                    "increase": 6
+                },
+                {
+                    "cases": 13,
+                    "date": "2020-03-03",
+                    "increase": 5
+                },
+                {
+                    "cases": 23,
+                    "date": "2020-03-04",
+                    "increase": 10
+                },
+                {
+                    "cases": 50,
+                    "date": "2020-03-05",
+                    "increase": 27
+                },
+                {
+                    "cases": 109,
+                    "date": "2020-03-06",
+                    "increase": 59
+                },
+                {
+                    "cases": 169,
+                    "date": "2020-03-07",
+                    "increase": 60
+                },
+                {
+                    "cases": 200,
+                    "date": "2020-03-08",
+                    "increase": 31
+                },
+                {
+                    "cases": 239,
+                    "date": "2020-03-09",
+                    "increase": 39
+                },
+                {
+                    "cases": 267,
+                    "date": "2020-03-10",
+                    "increase": 28
+                },
+                {
+                    "cases": 314,
+                    "date": "2020-03-11",
+                    "increase": 47
+                },
+                {
+                    "cases": 399,
+                    "date": "2020-03-12",
+                    "increase": 85
+                },
+                {
+                    "cases": 559,
+                    "date": "2020-03-13",
+                    "increase": 160
+                },
+                {
+                    "cases": 689,
+                    "date": "2020-03-14",
+                    "increase": 130
+                },
+                {
+                    "cases": 886,
+                    "date": "2020-03-15",
+                    "increase": 197
+                },
+                {
+                    "cases": 1058,
+                    "date": "2020-03-16",
+                    "increase": 172
+                },
+                {
+                    "cases": 1243,
+                    "date": "2020-03-17",
+                    "increase": 185
+                },
+                {
+                    "cases": 1486,
+                    "date": "2020-03-18",
+                    "increase": 243
+                },
+                {
+                    "cases": 1795,
+                    "date": "2020-03-19",
+                    "increase": 309
+                },
+                {
+                    "cases": 2257,
+                    "date": "2020-03-20",
+                    "increase": 462
+                },
+                {
+                    "cases": 2815,
+                    "date": "2020-03-21",
+                    "increase": 558
+                },
+                {
+                    "cases": 3401,
+                    "date": "2020-03-22",
+                    "increase": 586
+                },
+                {
+                    "cases": 3743,
+                    "date": "2020-03-23",
+                    "increase": 342
+                },
+                {
+                    "cases": 4269,
+                    "date": "2020-03-24",
+                    "increase": 526
+                },
+                {
+                    "cases": 4937,
+                    "date": "2020-03-25",
+                    "increase": 668
+                },
+                {
+                    "cases": 6235,
+                    "date": "2020-03-26",
+                    "increase": 1298
+                },
+                {
+                    "cases": 7284,
+                    "date": "2020-03-27",
+                    "increase": 1049
+                },
+                {
+                    "cases": 9134,
+                    "date": "2020-03-28",
+                    "increase": 1850
+                },
+                {
+                    "cases": 10836,
+                    "date": "2020-03-29",
+                    "increase": 1702
+                }
+            ]
+        },
+        {
+            "name": "Netherlands",
+            "stats": {
+                "cases": 9819,
+                "deaths": 640,
+                "largest_increase": {
+                    "date": "2020-03-27",
+                    "increase": 1172
+                },
+                "recovered": "-"
+            },
+            "values": [
+                {
+                    "cases": 1,
+                    "date": "2020-02-27",
+                    "increase": 1
+                },
+                {
+                    "cases": 2,
+                    "date": "2020-02-28",
+                    "increase": 1
+                },
+                {
+                    "cases": 6,
+                    "date": "2020-02-29",
+                    "increase": 4
+                },
+                {
+                    "cases": 9,
+                    "date": "2020-03-01",
+                    "increase": 3
+                },
+                {
+                    "cases": 19,
+                    "date": "2020-03-02",
+                    "increase": 10
+                },
+                {
+                    "cases": 24,
+                    "date": "2020-03-03",
+                    "increase": 5
+                },
+                {
+                    "cases": 38,
+                    "date": "2020-03-04",
+                    "increase": 14
+                },
+                {
+                    "cases": 82,
+                    "date": "2020-03-05",
+                    "increase": 44
+                },
+                {
+                    "cases": 128,
+                    "date": "2020-03-06",
+                    "increase": 46
+                },
+                {
+                    "cases": 188,
+                    "date": "2020-03-07",
+                    "increase": 60
+                },
+                {
+                    "cases": 264,
+                    "date": "2020-03-08",
+                    "increase": 76
+                },
+                {
+                    "cases": 321,
+                    "date": "2020-03-09",
+                    "increase": 57
+                },
+                {
+                    "cases": 382,
+                    "date": "2020-03-10",
+                    "increase": 61
+                },
+                {
+                    "cases": 503,
+                    "date": "2020-03-11",
+                    "increase": 121
+                },
+                {
+                    "cases": 614,
+                    "date": "2020-03-12",
+                    "increase": 111
+                },
+                {
+                    "cases": 804,
+                    "date": "2020-03-13",
+                    "increase": 190
+                },
+                {
+                    "cases": 959,
+                    "date": "2020-03-14",
+                    "increase": 155
+                },
+                {
+                    "cases": 1135,
+                    "date": "2020-03-15",
+                    "increase": 176
+                },
+                {
+                    "cases": 1413,
+                    "date": "2020-03-16",
+                    "increase": 278
+                },
+                {
+                    "cases": 1705,
+                    "date": "2020-03-17",
+                    "increase": 292
+                },
+                {
+                    "cases": 2051,
+                    "date": "2020-03-18",
+                    "increase": 346
+                },
+                {
+                    "cases": 2460,
+                    "date": "2020-03-19",
+                    "increase": 409
+                },
+                {
+                    "cases": 2994,
+                    "date": "2020-03-20",
+                    "increase": 534
+                },
+                {
+                    "cases": 3631,
+                    "date": "2020-03-21",
+                    "increase": 637
+                },
+                {
+                    "cases": 4204,
+                    "date": "2020-03-22",
+                    "increase": 573
+                },
+                {
+                    "cases": 4749,
+                    "date": "2020-03-23",
+                    "increase": 545
+                },
+                {
+                    "cases": 5560,
+                    "date": "2020-03-24",
+                    "increase": 811
+                },
+                {
+                    "cases": 6412,
+                    "date": "2020-03-25",
+                    "increase": 852
+                },
+                {
+                    "cases": 7431,
+                    "date": "2020-03-26",
+                    "increase": 1019
+                },
+                {
+                    "cases": 8603,
+                    "date": "2020-03-27",
+                    "increase": 1172
+                },
+                {
+                    "cases": 9819,
+                    "date": "2020-03-28",
+                    "increase": 1159
                 }
             ]
         },
         {
             "name": "South Korea",
             "stats": {
-                "cases": 9478,
-                "deaths": 144,
+                "cases": 9583,
+                "deaths": 152,
                 "largest_increase": {
                     "date": "2020-03-01",
                     "increase": 1062
                 },
-                "recovered": 4811
+                "recovered": 5033
             },
             "values": [
                 {
@@ -2348,336 +2722,18 @@ const DATA = {
                     "cases": 9478,
                     "date": "2020-03-27",
                     "increase": 146
-                }
-            ]
-        },
-        {
-            "name": "Belgium",
-            "stats": {
-                "cases": 9134,
-                "deaths": 353,
-                "largest_increase": {
+                },
+                {
+                    "cases": 9583,
                     "date": "2020-03-28",
-                    "increase": 1850
-                },
-                "recovered": 1063
-            },
-            "values": [
-                {
-                    "cases": 1,
-                    "date": "2020-02-04",
-                    "increase": 1
-                },
-                {
-                    "cases": 2,
-                    "date": "2020-03-01",
-                    "increase": 1
-                },
-                {
-                    "cases": 8,
-                    "date": "2020-03-02",
-                    "increase": 6
-                },
-                {
-                    "cases": 13,
-                    "date": "2020-03-03",
-                    "increase": 5
-                },
-                {
-                    "cases": 23,
-                    "date": "2020-03-04",
-                    "increase": 10
-                },
-                {
-                    "cases": 50,
-                    "date": "2020-03-05",
-                    "increase": 27
-                },
-                {
-                    "cases": 109,
-                    "date": "2020-03-06",
-                    "increase": 59
-                },
-                {
-                    "cases": 169,
-                    "date": "2020-03-07",
-                    "increase": 60
-                },
-                {
-                    "cases": 200,
-                    "date": "2020-03-08",
-                    "increase": 31
-                },
-                {
-                    "cases": 239,
-                    "date": "2020-03-09",
-                    "increase": 39
-                },
-                {
-                    "cases": 267,
-                    "date": "2020-03-10",
-                    "increase": 28
-                },
-                {
-                    "cases": 314,
-                    "date": "2020-03-11",
-                    "increase": 47
-                },
-                {
-                    "cases": 399,
-                    "date": "2020-03-12",
-                    "increase": 85
-                },
-                {
-                    "cases": 559,
-                    "date": "2020-03-13",
-                    "increase": 160
-                },
-                {
-                    "cases": 689,
-                    "date": "2020-03-14",
-                    "increase": 130
-                },
-                {
-                    "cases": 886,
-                    "date": "2020-03-15",
-                    "increase": 197
-                },
-                {
-                    "cases": 1058,
-                    "date": "2020-03-16",
-                    "increase": 172
-                },
-                {
-                    "cases": 1243,
-                    "date": "2020-03-17",
-                    "increase": 185
-                },
-                {
-                    "cases": 1486,
-                    "date": "2020-03-18",
-                    "increase": 243
-                },
-                {
-                    "cases": 1795,
-                    "date": "2020-03-19",
-                    "increase": 309
-                },
-                {
-                    "cases": 2257,
-                    "date": "2020-03-20",
-                    "increase": 462
-                },
-                {
-                    "cases": 2815,
-                    "date": "2020-03-21",
-                    "increase": 558
-                },
-                {
-                    "cases": 3401,
-                    "date": "2020-03-22",
-                    "increase": 586
-                },
-                {
-                    "cases": 3743,
-                    "date": "2020-03-23",
-                    "increase": 342
-                },
-                {
-                    "cases": 4269,
-                    "date": "2020-03-24",
-                    "increase": 526
-                },
-                {
-                    "cases": 4937,
-                    "date": "2020-03-25",
-                    "increase": 668
-                },
-                {
-                    "cases": 6235,
-                    "date": "2020-03-26",
-                    "increase": 1298
-                },
-                {
-                    "cases": 7284,
-                    "date": "2020-03-27",
-                    "increase": 1049
-                },
-                {
-                    "cases": 9134,
-                    "date": "2020-03-28",
-                    "increase": 1850
-                }
-            ]
-        },
-        {
-            "name": "Netherlands",
-            "stats": {
-                "cases": 8641,
-                "deaths": 547,
-                "largest_increase": {
-                    "date": "2020-03-27",
-                    "increase": 1172
-                },
-                "recovered": "-"
-            },
-            "values": [
-                {
-                    "cases": 1,
-                    "date": "2020-02-27",
-                    "increase": 1
-                },
-                {
-                    "cases": 2,
-                    "date": "2020-02-28",
-                    "increase": 1
-                },
-                {
-                    "cases": 6,
-                    "date": "2020-02-29",
-                    "increase": 4
-                },
-                {
-                    "cases": 9,
-                    "date": "2020-03-01",
-                    "increase": 3
-                },
-                {
-                    "cases": 19,
-                    "date": "2020-03-02",
-                    "increase": 10
-                },
-                {
-                    "cases": 24,
-                    "date": "2020-03-03",
-                    "increase": 5
-                },
-                {
-                    "cases": 38,
-                    "date": "2020-03-04",
-                    "increase": 14
-                },
-                {
-                    "cases": 82,
-                    "date": "2020-03-05",
-                    "increase": 44
-                },
-                {
-                    "cases": 128,
-                    "date": "2020-03-06",
-                    "increase": 46
-                },
-                {
-                    "cases": 188,
-                    "date": "2020-03-07",
-                    "increase": 60
-                },
-                {
-                    "cases": 264,
-                    "date": "2020-03-08",
-                    "increase": 76
-                },
-                {
-                    "cases": 321,
-                    "date": "2020-03-09",
-                    "increase": 57
-                },
-                {
-                    "cases": 382,
-                    "date": "2020-03-10",
-                    "increase": 61
-                },
-                {
-                    "cases": 503,
-                    "date": "2020-03-11",
-                    "increase": 121
-                },
-                {
-                    "cases": 614,
-                    "date": "2020-03-12",
-                    "increase": 111
-                },
-                {
-                    "cases": 804,
-                    "date": "2020-03-13",
-                    "increase": 190
-                },
-                {
-                    "cases": 959,
-                    "date": "2020-03-14",
-                    "increase": 155
-                },
-                {
-                    "cases": 1135,
-                    "date": "2020-03-15",
-                    "increase": 176
-                },
-                {
-                    "cases": 1413,
-                    "date": "2020-03-16",
-                    "increase": 278
-                },
-                {
-                    "cases": 1705,
-                    "date": "2020-03-17",
-                    "increase": 292
-                },
-                {
-                    "cases": 2051,
-                    "date": "2020-03-18",
-                    "increase": 346
-                },
-                {
-                    "cases": 2460,
-                    "date": "2020-03-19",
-                    "increase": 409
-                },
-                {
-                    "cases": 2994,
-                    "date": "2020-03-20",
-                    "increase": 534
-                },
-                {
-                    "cases": 3631,
-                    "date": "2020-03-21",
-                    "increase": 637
-                },
-                {
-                    "cases": 4204,
-                    "date": "2020-03-22",
-                    "increase": 573
-                },
-                {
-                    "cases": 4749,
-                    "date": "2020-03-23",
-                    "increase": 545
-                },
-                {
-                    "cases": 5560,
-                    "date": "2020-03-24",
-                    "increase": 811
-                },
-                {
-                    "cases": 6412,
-                    "date": "2020-03-25",
-                    "increase": 852
-                },
-                {
-                    "cases": 7431,
-                    "date": "2020-03-26",
-                    "increase": 1019
-                },
-                {
-                    "cases": 8641,
-                    "date": "2020-03-27",
-                    "increase": 1172
+                    "increase": 105
                 }
             ]
         },
         {
             "name": "Austria",
             "stats": {
-                "cases": 7898,
+                "cases": 8450,
                 "deaths": 68,
                 "largest_increase": {
                     "date": "2020-03-27",
@@ -2827,22 +2883,27 @@ const DATA = {
                     "increase": 992
                 },
                 {
-                    "cases": 7898,
+                    "cases": 7995,
                     "date": "2020-03-28",
-                    "increase": 288
+                    "increase": 654
+                },
+                {
+                    "cases": 8450,
+                    "date": "2020-03-29",
+                    "increase": -269
                 }
             ]
         },
         {
             "name": "Turkey",
             "stats": {
-                "cases": 5698,
-                "deaths": 92,
+                "cases": 7402,
+                "deaths": 108,
                 "largest_increase": {
                     "date": "2020-03-27",
                     "increase": 2069
                 },
-                "recovered": 42
+                "recovered": 70
             },
             "values": [
                 {
@@ -2929,19 +2990,24 @@ const DATA = {
                     "cases": 5698,
                     "date": "2020-03-27",
                     "increase": 2069
+                },
+                {
+                    "cases": 7402,
+                    "date": "2020-03-28",
+                    "increase": 1704
                 }
             ]
         },
         {
             "name": "Canada",
             "stats": {
-                "cases": 4734,
-                "deaths": 55,
+                "cases": 5607,
+                "deaths": 61,
                 "largest_increase": {
-                    "date": "2020-03-24",
-                    "increase": 690
+                    "date": "2020-03-28",
+                    "increase": 909
                 },
-                "recovered": 353
+                "recovered": 479
             },
             "values": [
                 {
@@ -3140,20 +3206,25 @@ const DATA = {
                     "increase": 633
                 },
                 {
-                    "cases": 4734,
+                    "cases": 4743,
                     "date": "2020-03-27",
-                    "increase": 671
+                    "increase": 725
+                },
+                {
+                    "cases": 5607,
+                    "date": "2020-03-28",
+                    "increase": 909
                 }
             ]
         },
         {
             "name": "Portugal",
             "stats": {
-                "cases": 4268,
-                "deaths": 76,
+                "cases": 5170,
+                "deaths": 100,
                 "largest_increase": {
-                    "date": "2020-03-27",
-                    "increase": 724
+                    "date": "2020-03-28",
+                    "increase": 902
                 },
                 "recovered": 43
             },
@@ -3287,14 +3358,19 @@ const DATA = {
                     "cases": 4268,
                     "date": "2020-03-27",
                     "increase": 724
+                },
+                {
+                    "cases": 5170,
+                    "date": "2020-03-28",
+                    "increase": 902
                 }
             ]
         },
         {
             "name": "Norway",
             "stats": {
-                "cases": 3809,
-                "deaths": 20,
+                "cases": 4048,
+                "deaths": 23,
                 "largest_increase": {
                     "date": "2020-03-27",
                     "increase": 425
@@ -3458,7 +3534,7 @@ const DATA = {
                     "increase": 425
                 },
                 {
-                    "cases": 3809,
+                    "cases": 4048,
                     "date": "2020-03-28",
                     "increase": 193
                 }
@@ -3467,11 +3543,11 @@ const DATA = {
         {
             "name": "Australia",
             "stats": {
-                "cases": 3636,
-                "deaths": 14,
+                "cases": 3966,
+                "deaths": 16,
                 "largest_increase": {
                     "date": "2020-03-28",
-                    "increase": 458
+                    "increase": 460
                 },
                 "recovered": 224
             },
@@ -3702,17 +3778,17 @@ const DATA = {
                     "increase": 374
                 },
                 {
-                    "cases": 3636,
+                    "cases": 3966,
                     "date": "2020-03-28",
-                    "increase": 458
+                    "increase": 460
                 }
             ]
         },
         {
             "name": "Brazil",
             "stats": {
-                "cases": 3477,
-                "deaths": 93,
+                "cases": 3904,
+                "deaths": 111,
                 "largest_increase": {
                     "date": "2020-03-27",
                     "increase": 502
@@ -3846,20 +3922,25 @@ const DATA = {
                     "increase": 482
                 },
                 {
-                    "cases": 3477,
+                    "cases": 3417,
                     "date": "2020-03-27",
                     "increase": 502
+                },
+                {
+                    "cases": 3904,
+                    "date": "2020-03-28",
+                    "increase": 487
                 }
             ]
         },
         {
             "name": "Israel",
             "stats": {
-                "cases": 3460,
-                "deaths": 12,
+                "cases": 3865,
+                "deaths": 13,
                 "largest_increase": {
-                    "date": "2020-03-24",
-                    "increase": 488
+                    "date": "2020-03-28",
+                    "increase": 584
                 },
                 "recovered": 89
             },
@@ -4045,20 +4126,25 @@ const DATA = {
                     "increase": 342
                 },
                 {
-                    "cases": 3460,
+                    "cases": 3619,
                     "date": "2020-03-28",
-                    "increase": 425
+                    "increase": 584
+                },
+                {
+                    "cases": 3865,
+                    "date": "2020-03-29",
+                    "increase": 246
                 }
             ]
         },
         {
             "name": "Sweden",
             "stats": {
-                "cases": 3079,
-                "deaths": 106,
+                "cases": 3460,
+                "deaths": 112,
                 "largest_increase": {
-                    "date": "2020-03-26",
-                    "increase": 314
+                    "date": "2020-03-28",
+                    "increase": 378
                 },
                 "recovered": 18
             },
@@ -4219,17 +4305,22 @@ const DATA = {
                     "increase": 314
                 },
                 {
-                    "cases": 3079,
+                    "cases": 3069,
                     "date": "2020-03-27",
                     "increase": 229
+                },
+                {
+                    "cases": 3460,
+                    "date": "2020-03-28",
+                    "increase": 378
                 }
             ]
         },
         {
             "name": "Czech Republic",
             "stats": {
-                "cases": 2422,
-                "deaths": 9,
+                "cases": 2689,
+                "deaths": 13,
                 "largest_increase": {
                     "date": "2020-03-27",
                     "increase": 373
@@ -4373,22 +4464,27 @@ const DATA = {
                     "increase": 373
                 },
                 {
-                    "cases": 2422,
+                    "cases": 2657,
                     "date": "2020-03-28",
-                    "increase": 27
+                    "increase": 262
+                },
+                {
+                    "cases": 2689,
+                    "date": "2020-03-29",
+                    "increase": 32
                 }
             ]
         },
         {
             "name": "Malaysia",
             "stats": {
-                "cases": 2320,
-                "deaths": 27,
+                "cases": 2470,
+                "deaths": 34,
                 "largest_increase": {
                     "date": "2020-03-26",
                     "increase": 235
                 },
-                "recovered": 320
+                "recovered": 388
             },
             "values": [
                 {
@@ -4655,27 +4751,19 @@ const DATA = {
                     "cases": 2320,
                     "date": "2020-03-28",
                     "increase": 159
+                },
+                {
+                    "cases": 2470,
+                    "date": "2020-03-29",
+                    "increase": 150
                 }
             ]
         },
         {
-            "name": "Denmark",
-            "stats": {
-                "cases": 2199,
-                "deaths": 52,
-                "largest_increase": {
-                    "date": null,
-                    "increase": 0
-                },
-                "recovered": "-"
-            },
-            "values": []
-        },
-        {
             "name": "Ireland",
             "stats": {
-                "cases": 2121,
-                "deaths": 22,
+                "cases": 2415,
+                "deaths": 36,
                 "largest_increase": {
                     "date": "2020-03-27",
                     "increase": 302
@@ -4812,138 +4900,37 @@ const DATA = {
                     "cases": 2121,
                     "date": "2020-03-27",
                     "increase": 302
+                },
+                {
+                    "cases": 2415,
+                    "date": "2020-03-28",
+                    "increase": 294
                 }
             ]
         },
         {
-            "name": "Ecuador",
+            "name": "Denmark",
             "stats": {
-                "cases": 1627,
-                "deaths": 41,
+                "cases": 2366,
+                "deaths": 65,
                 "largest_increase": {
-                    "date": "2020-03-22",
-                    "increase": 257
+                    "date": null,
+                    "increase": 0
                 },
-                "recovered": 3
+                "recovered": "-"
             },
-            "values": [
-                {
-                    "cases": 1,
-                    "date": "2020-02-29",
-                    "increase": 1
-                },
-                {
-                    "cases": 6,
-                    "date": "2020-03-01",
-                    "increase": 5
-                },
-                {
-                    "cases": 11,
-                    "date": "2020-03-03",
-                    "increase": 5
-                },
-                {
-                    "cases": 14,
-                    "date": "2020-03-04",
-                    "increase": 3
-                },
-                {
-                    "cases": 15,
-                    "date": "2020-03-08",
-                    "increase": 1
-                },
-                {
-                    "cases": 17,
-                    "date": "2020-03-10",
-                    "increase": 2
-                },
-                {
-                    "cases": 23,
-                    "date": "2020-03-13",
-                    "increase": 6
-                },
-                {
-                    "cases": 28,
-                    "date": "2020-03-14",
-                    "increase": 5
-                },
-                {
-                    "cases": 37,
-                    "date": "2020-03-15",
-                    "increase": 9
-                },
-                {
-                    "cases": 58,
-                    "date": "2020-03-16",
-                    "increase": 21
-                },
-                {
-                    "cases": 111,
-                    "date": "2020-03-17",
-                    "increase": 53
-                },
-                {
-                    "cases": 155,
-                    "date": "2020-03-18",
-                    "increase": 44
-                },
-                {
-                    "cases": 260,
-                    "date": "2020-03-19",
-                    "increase": 105
-                },
-                {
-                    "cases": 367,
-                    "date": "2020-03-20",
-                    "increase": 107
-                },
-                {
-                    "cases": 532,
-                    "date": "2020-03-21",
-                    "increase": 165
-                },
-                {
-                    "cases": 789,
-                    "date": "2020-03-22",
-                    "increase": 257
-                },
-                {
-                    "cases": 981,
-                    "date": "2020-03-23",
-                    "increase": 192
-                },
-                {
-                    "cases": 1082,
-                    "date": "2020-03-24",
-                    "increase": 101
-                },
-                {
-                    "cases": 1211,
-                    "date": "2020-03-25",
-                    "increase": 129
-                },
-                {
-                    "cases": 1403,
-                    "date": "2020-03-26",
-                    "increase": 192
-                },
-                {
-                    "cases": 1627,
-                    "date": "2020-03-27",
-                    "increase": 224
-                }
-            ]
+            "values": []
         },
         {
             "name": "Chile",
             "stats": {
-                "cases": 1610,
-                "deaths": 5,
+                "cases": 1909,
+                "deaths": 6,
                 "largest_increase": {
                     "date": "2020-03-27",
                     "increase": 304
                 },
-                "recovered": 43
+                "recovered": 61
             },
             "values": [
                 {
@@ -5070,19 +5057,148 @@ const DATA = {
                     "cases": 1610,
                     "date": "2020-03-27",
                     "increase": 304
+                },
+                {
+                    "cases": 1909,
+                    "date": "2020-03-28",
+                    "increase": 299
+                }
+            ]
+        },
+        {
+            "name": "Ecuador",
+            "stats": {
+                "cases": 1835,
+                "deaths": 48,
+                "largest_increase": {
+                    "date": "2020-03-22",
+                    "increase": 257
+                },
+                "recovered": 3
+            },
+            "values": [
+                {
+                    "cases": 1,
+                    "date": "2020-02-29",
+                    "increase": 1
+                },
+                {
+                    "cases": 6,
+                    "date": "2020-03-01",
+                    "increase": 5
+                },
+                {
+                    "cases": 11,
+                    "date": "2020-03-03",
+                    "increase": 5
+                },
+                {
+                    "cases": 14,
+                    "date": "2020-03-04",
+                    "increase": 3
+                },
+                {
+                    "cases": 15,
+                    "date": "2020-03-08",
+                    "increase": 1
+                },
+                {
+                    "cases": 17,
+                    "date": "2020-03-10",
+                    "increase": 2
+                },
+                {
+                    "cases": 23,
+                    "date": "2020-03-13",
+                    "increase": 6
+                },
+                {
+                    "cases": 28,
+                    "date": "2020-03-14",
+                    "increase": 5
+                },
+                {
+                    "cases": 37,
+                    "date": "2020-03-15",
+                    "increase": 9
+                },
+                {
+                    "cases": 58,
+                    "date": "2020-03-16",
+                    "increase": 21
+                },
+                {
+                    "cases": 111,
+                    "date": "2020-03-17",
+                    "increase": 53
+                },
+                {
+                    "cases": 155,
+                    "date": "2020-03-18",
+                    "increase": 44
+                },
+                {
+                    "cases": 260,
+                    "date": "2020-03-19",
+                    "increase": 105
+                },
+                {
+                    "cases": 367,
+                    "date": "2020-03-20",
+                    "increase": 107
+                },
+                {
+                    "cases": 532,
+                    "date": "2020-03-21",
+                    "increase": 165
+                },
+                {
+                    "cases": 789,
+                    "date": "2020-03-22",
+                    "increase": 257
+                },
+                {
+                    "cases": 981,
+                    "date": "2020-03-23",
+                    "increase": 192
+                },
+                {
+                    "cases": 1082,
+                    "date": "2020-03-24",
+                    "increase": 101
+                },
+                {
+                    "cases": 1211,
+                    "date": "2020-03-25",
+                    "increase": 129
+                },
+                {
+                    "cases": 1403,
+                    "date": "2020-03-26",
+                    "increase": 192
+                },
+                {
+                    "cases": 1627,
+                    "date": "2020-03-27",
+                    "increase": 224
+                },
+                {
+                    "cases": 1835,
+                    "date": "2020-03-28",
+                    "increase": 208
                 }
             ]
         },
         {
             "name": "Luxembourg",
             "stats": {
-                "cases": 1605,
-                "deaths": 15,
+                "cases": 1831,
+                "deaths": 18,
                 "largest_increase": {
                     "date": "2020-03-25",
                     "increase": 234
                 },
-                "recovered": 6
+                "recovered": 40
             },
             "values": [
                 {
@@ -5204,19 +5320,327 @@ const DATA = {
                     "cases": 1605,
                     "date": "2020-03-27",
                     "increase": 152
+                },
+                {
+                    "cases": 1831,
+                    "date": "2020-03-28",
+                    "increase": 226
+                }
+            ]
+        },
+        {
+            "name": "Romania",
+            "stats": {
+                "cases": 1760,
+                "deaths": 37,
+                "largest_increase": {
+                    "date": "2020-03-29",
+                    "increase": 308
+                },
+                "recovered": 169
+            },
+            "values": [
+                {
+                    "cases": 1,
+                    "date": "2020-02-26",
+                    "increase": 1
+                },
+                {
+                    "cases": 3,
+                    "date": "2020-02-28",
+                    "increase": 2
+                },
+                {
+                    "cases": 4,
+                    "date": "2020-03-03",
+                    "increase": 1
+                },
+                {
+                    "cases": 6,
+                    "date": "2020-03-04",
+                    "increase": 2
+                },
+                {
+                    "cases": 6,
+                    "date": "2020-03-05",
+                    "increase": 0
+                },
+                {
+                    "cases": 9,
+                    "date": "2020-03-06",
+                    "increase": 3
+                },
+                {
+                    "cases": 13,
+                    "date": "2020-03-07",
+                    "increase": 4
+                },
+                {
+                    "cases": 15,
+                    "date": "2020-03-08",
+                    "increase": 2
+                },
+                {
+                    "cases": 17,
+                    "date": "2020-03-09",
+                    "increase": 2
+                },
+                {
+                    "cases": 29,
+                    "date": "2020-03-10",
+                    "increase": 12
+                },
+                {
+                    "cases": 47,
+                    "date": "2020-03-11",
+                    "increase": 18
+                },
+                {
+                    "cases": 59,
+                    "date": "2020-03-12",
+                    "increase": 12
+                },
+                {
+                    "cases": 95,
+                    "date": "2020-03-13",
+                    "increase": 36
+                },
+                {
+                    "cases": 123,
+                    "date": "2020-03-14",
+                    "increase": 28
+                },
+                {
+                    "cases": 139,
+                    "date": "2020-03-15",
+                    "increase": 16
+                },
+                {
+                    "cases": 168,
+                    "date": "2020-03-16",
+                    "increase": 29
+                },
+                {
+                    "cases": 217,
+                    "date": "2020-03-17",
+                    "increase": 49
+                },
+                {
+                    "cases": 260,
+                    "date": "2020-03-18",
+                    "increase": 43
+                },
+                {
+                    "cases": 277,
+                    "date": "2020-03-19",
+                    "increase": 17
+                },
+                {
+                    "cases": 308,
+                    "date": "2020-03-20",
+                    "increase": 31
+                },
+                {
+                    "cases": 367,
+                    "date": "2020-03-21",
+                    "increase": 59
+                },
+                {
+                    "cases": 433,
+                    "date": "2020-03-22",
+                    "increase": 66
+                },
+                {
+                    "cases": 576,
+                    "date": "2020-03-23",
+                    "increase": 143
+                },
+                {
+                    "cases": 762,
+                    "date": "2020-03-24",
+                    "increase": 186
+                },
+                {
+                    "cases": 906,
+                    "date": "2020-03-25",
+                    "increase": 144
+                },
+                {
+                    "cases": 1029,
+                    "date": "2020-03-26",
+                    "increase": 123
+                },
+                {
+                    "cases": 1292,
+                    "date": "2020-03-27",
+                    "increase": 263
+                },
+                {
+                    "cases": 1452,
+                    "date": "2020-03-28",
+                    "increase": 160
+                },
+                {
+                    "cases": 1760,
+                    "date": "2020-03-29",
+                    "increase": 308
+                }
+            ]
+        },
+        {
+            "name": "Poland",
+            "stats": {
+                "cases": 1717,
+                "deaths": 19,
+                "largest_increase": {
+                    "date": "2020-03-28",
+                    "increase": 249
+                },
+                "recovered": 15
+            },
+            "values": [
+                {
+                    "cases": 1,
+                    "date": "2020-03-04",
+                    "increase": 1
+                },
+                {
+                    "cases": 1,
+                    "date": "2020-03-05",
+                    "increase": 0
+                },
+                {
+                    "cases": 5,
+                    "date": "2020-03-06",
+                    "increase": 4
+                },
+                {
+                    "cases": 6,
+                    "date": "2020-03-07",
+                    "increase": 1
+                },
+                {
+                    "cases": 11,
+                    "date": "2020-03-08",
+                    "increase": 5
+                },
+                {
+                    "cases": 17,
+                    "date": "2020-03-09",
+                    "increase": 6
+                },
+                {
+                    "cases": 22,
+                    "date": "2020-03-10",
+                    "increase": 5
+                },
+                {
+                    "cases": 31,
+                    "date": "2020-03-11",
+                    "increase": 9
+                },
+                {
+                    "cases": 51,
+                    "date": "2020-03-12",
+                    "increase": 20
+                },
+                {
+                    "cases": 68,
+                    "date": "2020-03-13",
+                    "increase": 17
+                },
+                {
+                    "cases": 104,
+                    "date": "2020-03-14",
+                    "increase": 36
+                },
+                {
+                    "cases": 125,
+                    "date": "2020-03-15",
+                    "increase": 21
+                },
+                {
+                    "cases": 177,
+                    "date": "2020-03-16",
+                    "increase": 52
+                },
+                {
+                    "cases": 238,
+                    "date": "2020-03-17",
+                    "increase": 61
+                },
+                {
+                    "cases": 287,
+                    "date": "2020-03-18",
+                    "increase": 49
+                },
+                {
+                    "cases": 355,
+                    "date": "2020-03-19",
+                    "increase": 68
+                },
+                {
+                    "cases": 425,
+                    "date": "2020-03-20",
+                    "increase": 70
+                },
+                {
+                    "cases": 536,
+                    "date": "2020-03-21",
+                    "increase": 111
+                },
+                {
+                    "cases": 634,
+                    "date": "2020-03-22",
+                    "increase": 98
+                },
+                {
+                    "cases": 749,
+                    "date": "2020-03-23",
+                    "increase": 115
+                },
+                {
+                    "cases": 900,
+                    "date": "2020-03-24",
+                    "increase": 151
+                },
+                {
+                    "cases": 1051,
+                    "date": "2020-03-25",
+                    "increase": 151
+                },
+                {
+                    "cases": 1221,
+                    "date": "2020-03-26",
+                    "increase": 170
+                },
+                {
+                    "cases": 1389,
+                    "date": "2020-03-27",
+                    "increase": 168
+                },
+                {
+                    "cases": 1638,
+                    "date": "2020-03-28",
+                    "increase": 249
+                },
+                {
+                    "cases": 1717,
+                    "date": "2020-03-29",
+                    "increase": 79
                 }
             ]
         },
         {
             "name": "Japan",
             "stats": {
-                "cases": 1499,
-                "deaths": 49,
+                "cases": 1693,
+                "deaths": 52,
                 "largest_increase": {
                     "date": "2020-03-27",
-                    "increase": 135
+                    "increase": 112
                 },
-                "recovered": 359
+                "recovered": 404
             },
             "values": [
                 {
@@ -5570,454 +5994,27 @@ const DATA = {
                     "increase": 98
                 },
                 {
-                    "cases": 1364,
+                    "cases": 1387,
                     "date": "2020-03-26",
-                    "increase": 73
+                    "increase": 96
                 },
                 {
-                    "cases": 1499,
+                    "cases": 1693,
                     "date": "2020-03-27",
-                    "increase": 135
-                }
-            ]
-        },
-        {
-            "name": "Romania",
-            "stats": {
-                "cases": 1452,
-                "deaths": 29,
-                "largest_increase": {
-                    "date": "2020-03-27",
-                    "increase": 263
-                },
-                "recovered": 139
-            },
-            "values": [
-                {
-                    "cases": 1,
-                    "date": "2020-02-26",
-                    "increase": 1
-                },
-                {
-                    "cases": 3,
-                    "date": "2020-02-28",
-                    "increase": 2
-                },
-                {
-                    "cases": 4,
-                    "date": "2020-03-03",
-                    "increase": 1
-                },
-                {
-                    "cases": 6,
-                    "date": "2020-03-04",
-                    "increase": 2
-                },
-                {
-                    "cases": 6,
-                    "date": "2020-03-05",
-                    "increase": 0
-                },
-                {
-                    "cases": 9,
-                    "date": "2020-03-06",
-                    "increase": 3
-                },
-                {
-                    "cases": 13,
-                    "date": "2020-03-07",
-                    "increase": 4
-                },
-                {
-                    "cases": 15,
-                    "date": "2020-03-08",
-                    "increase": 2
-                },
-                {
-                    "cases": 17,
-                    "date": "2020-03-09",
-                    "increase": 2
-                },
-                {
-                    "cases": 29,
-                    "date": "2020-03-10",
-                    "increase": 12
-                },
-                {
-                    "cases": 47,
-                    "date": "2020-03-11",
-                    "increase": 18
-                },
-                {
-                    "cases": 59,
-                    "date": "2020-03-12",
-                    "increase": 12
-                },
-                {
-                    "cases": 95,
-                    "date": "2020-03-13",
-                    "increase": 36
-                },
-                {
-                    "cases": 123,
-                    "date": "2020-03-14",
-                    "increase": 28
-                },
-                {
-                    "cases": 139,
-                    "date": "2020-03-15",
-                    "increase": 16
-                },
-                {
-                    "cases": 168,
-                    "date": "2020-03-16",
-                    "increase": 29
-                },
-                {
-                    "cases": 217,
-                    "date": "2020-03-17",
-                    "increase": 49
-                },
-                {
-                    "cases": 260,
-                    "date": "2020-03-18",
-                    "increase": 43
-                },
-                {
-                    "cases": 277,
-                    "date": "2020-03-19",
-                    "increase": 17
-                },
-                {
-                    "cases": 308,
-                    "date": "2020-03-20",
-                    "increase": 31
-                },
-                {
-                    "cases": 367,
-                    "date": "2020-03-21",
-                    "increase": 59
-                },
-                {
-                    "cases": 433,
-                    "date": "2020-03-22",
-                    "increase": 66
-                },
-                {
-                    "cases": 576,
-                    "date": "2020-03-23",
-                    "increase": 143
-                },
-                {
-                    "cases": 762,
-                    "date": "2020-03-24",
-                    "increase": 186
-                },
-                {
-                    "cases": 906,
-                    "date": "2020-03-25",
-                    "increase": 144
-                },
-                {
-                    "cases": 1029,
-                    "date": "2020-03-26",
-                    "increase": 123
-                },
-                {
-                    "cases": 1292,
-                    "date": "2020-03-27",
-                    "increase": 263
-                },
-                {
-                    "cases": 1452,
-                    "date": "2020-03-28",
-                    "increase": 160
-                }
-            ]
-        },
-        {
-            "name": "Poland",
-            "stats": {
-                "cases": 1436,
-                "deaths": 16,
-                "largest_increase": {
-                    "date": "2020-03-26",
-                    "increase": 170
-                },
-                "recovered": 12
-            },
-            "values": [
-                {
-                    "cases": 1,
-                    "date": "2020-03-04",
-                    "increase": 1
-                },
-                {
-                    "cases": 1,
-                    "date": "2020-03-05",
-                    "increase": 0
-                },
-                {
-                    "cases": 5,
-                    "date": "2020-03-06",
-                    "increase": 4
-                },
-                {
-                    "cases": 6,
-                    "date": "2020-03-07",
-                    "increase": 1
-                },
-                {
-                    "cases": 11,
-                    "date": "2020-03-08",
-                    "increase": 5
-                },
-                {
-                    "cases": 17,
-                    "date": "2020-03-09",
-                    "increase": 6
-                },
-                {
-                    "cases": 22,
-                    "date": "2020-03-10",
-                    "increase": 5
-                },
-                {
-                    "cases": 31,
-                    "date": "2020-03-11",
-                    "increase": 9
-                },
-                {
-                    "cases": 51,
-                    "date": "2020-03-12",
-                    "increase": 20
-                },
-                {
-                    "cases": 68,
-                    "date": "2020-03-13",
-                    "increase": 17
-                },
-                {
-                    "cases": 104,
-                    "date": "2020-03-14",
-                    "increase": 36
-                },
-                {
-                    "cases": 125,
-                    "date": "2020-03-15",
-                    "increase": 21
-                },
-                {
-                    "cases": 177,
-                    "date": "2020-03-16",
-                    "increase": 52
-                },
-                {
-                    "cases": 238,
-                    "date": "2020-03-17",
-                    "increase": 61
-                },
-                {
-                    "cases": 287,
-                    "date": "2020-03-18",
-                    "increase": 49
-                },
-                {
-                    "cases": 355,
-                    "date": "2020-03-19",
-                    "increase": 68
-                },
-                {
-                    "cases": 425,
-                    "date": "2020-03-20",
-                    "increase": 70
-                },
-                {
-                    "cases": 536,
-                    "date": "2020-03-21",
-                    "increase": 111
-                },
-                {
-                    "cases": 634,
-                    "date": "2020-03-22",
-                    "increase": 98
-                },
-                {
-                    "cases": 749,
-                    "date": "2020-03-23",
-                    "increase": 115
-                },
-                {
-                    "cases": 900,
-                    "date": "2020-03-24",
-                    "increase": 151
-                },
-                {
-                    "cases": 1051,
-                    "date": "2020-03-25",
-                    "increase": 151
-                },
-                {
-                    "cases": 1221,
-                    "date": "2020-03-26",
-                    "increase": 170
-                },
-                {
-                    "cases": 1389,
-                    "date": "2020-03-27",
-                    "increase": 168
-                },
-                {
-                    "cases": 1436,
-                    "date": "2020-03-28",
-                    "increase": 47
-                }
-            ]
-        },
-        {
-            "name": "Pakistan",
-            "stats": {
-                "cases": 1408,
-                "deaths": 11,
-                "largest_increase": {
-                    "date": "2020-03-27",
-                    "increase": 211
-                },
-                "recovered": 25
-            },
-            "values": [
-                {
-                    "cases": 2,
-                    "date": "2020-02-26",
-                    "increase": 2
-                },
-                {
-                    "cases": 4,
-                    "date": "2020-02-29",
-                    "increase": 2
-                },
-                {
-                    "cases": 5,
-                    "date": "2020-03-03",
-                    "increase": 1
-                },
-                {
-                    "cases": 6,
-                    "date": "2020-03-05",
-                    "increase": 1
-                },
-                {
-                    "cases": 7,
-                    "date": "2020-03-08",
-                    "increase": 1
-                },
-                {
-                    "cases": 16,
-                    "date": "2020-03-09",
-                    "increase": 9
-                },
-                {
-                    "cases": 19,
-                    "date": "2020-03-10",
-                    "increase": 3
-                },
-                {
-                    "cases": 20,
-                    "date": "2020-03-11",
-                    "increase": 1
-                },
-                {
-                    "cases": 21,
-                    "date": "2020-03-12",
-                    "increase": 1
-                },
-                {
-                    "cases": 28,
-                    "date": "2020-03-13",
-                    "increase": 7
-                },
-                {
-                    "cases": 31,
-                    "date": "2020-03-14",
-                    "increase": 3
-                },
-                {
-                    "cases": 53,
-                    "date": "2020-03-15",
-                    "increase": 22
-                },
-                {
-                    "cases": 187,
-                    "date": "2020-03-16",
-                    "increase": 134
-                },
-                {
-                    "cases": 241,
-                    "date": "2020-03-17",
-                    "increase": 54
-                },
-                {
-                    "cases": 302,
-                    "date": "2020-03-18",
-                    "increase": 61
-                },
-                {
-                    "cases": 461,
-                    "date": "2020-03-19",
-                    "increase": 159
-                },
-                {
-                    "cases": 495,
-                    "date": "2020-03-20",
-                    "increase": 34
-                },
-                {
-                    "cases": 646,
-                    "date": "2020-03-21",
-                    "increase": 151
-                },
-                {
-                    "cases": 784,
-                    "date": "2020-03-22",
-                    "increase": 138
-                },
-                {
-                    "cases": 887,
-                    "date": "2020-03-23",
-                    "increase": 103
-                },
-                {
-                    "cases": 991,
-                    "date": "2020-03-24",
-                    "increase": 104
-                },
-                {
-                    "cases": 1057,
-                    "date": "2020-03-25",
-                    "increase": 66
-                },
-                {
-                    "cases": 1197,
-                    "date": "2020-03-26",
-                    "increase": 140
-                },
-                {
-                    "cases": 1408,
-                    "date": "2020-03-27",
-                    "increase": 211
+                    "increase": 112
                 }
             ]
         },
         {
             "name": "Russia",
             "stats": {
-                "cases": 1264,
-                "deaths": 4,
+                "cases": 1534,
+                "deaths": 8,
                 "largest_increase": {
-                    "date": "2020-03-28",
-                    "increase": 228
+                    "date": "2020-03-29",
+                    "increase": 270
                 },
-                "recovered": 49
+                "recovered": 64
             },
             "values": [
                 {
@@ -6149,19 +6146,317 @@ const DATA = {
                     "cases": 1264,
                     "date": "2020-03-28",
                     "increase": 228
+                },
+                {
+                    "cases": 1534,
+                    "date": "2020-03-29",
+                    "increase": 270
+                }
+            ]
+        },
+        {
+            "name": "Pakistan",
+            "stats": {
+                "cases": 1526,
+                "deaths": 13,
+                "largest_increase": {
+                    "date": "2020-03-27",
+                    "increase": 211
+                },
+                "recovered": 28
+            },
+            "values": [
+                {
+                    "cases": 2,
+                    "date": "2020-02-26",
+                    "increase": 2
+                },
+                {
+                    "cases": 4,
+                    "date": "2020-02-29",
+                    "increase": 2
+                },
+                {
+                    "cases": 5,
+                    "date": "2020-03-03",
+                    "increase": 1
+                },
+                {
+                    "cases": 6,
+                    "date": "2020-03-05",
+                    "increase": 1
+                },
+                {
+                    "cases": 7,
+                    "date": "2020-03-08",
+                    "increase": 1
+                },
+                {
+                    "cases": 16,
+                    "date": "2020-03-09",
+                    "increase": 9
+                },
+                {
+                    "cases": 19,
+                    "date": "2020-03-10",
+                    "increase": 3
+                },
+                {
+                    "cases": 20,
+                    "date": "2020-03-11",
+                    "increase": 1
+                },
+                {
+                    "cases": 21,
+                    "date": "2020-03-12",
+                    "increase": 1
+                },
+                {
+                    "cases": 28,
+                    "date": "2020-03-13",
+                    "increase": 7
+                },
+                {
+                    "cases": 31,
+                    "date": "2020-03-14",
+                    "increase": 3
+                },
+                {
+                    "cases": 53,
+                    "date": "2020-03-15",
+                    "increase": 22
+                },
+                {
+                    "cases": 187,
+                    "date": "2020-03-16",
+                    "increase": 134
+                },
+                {
+                    "cases": 241,
+                    "date": "2020-03-17",
+                    "increase": 54
+                },
+                {
+                    "cases": 302,
+                    "date": "2020-03-18",
+                    "increase": 61
+                },
+                {
+                    "cases": 461,
+                    "date": "2020-03-19",
+                    "increase": 159
+                },
+                {
+                    "cases": 495,
+                    "date": "2020-03-20",
+                    "increase": 34
+                },
+                {
+                    "cases": 646,
+                    "date": "2020-03-21",
+                    "increase": 151
+                },
+                {
+                    "cases": 784,
+                    "date": "2020-03-22",
+                    "increase": 138
+                },
+                {
+                    "cases": 887,
+                    "date": "2020-03-23",
+                    "increase": 103
+                },
+                {
+                    "cases": 991,
+                    "date": "2020-03-24",
+                    "increase": 104
+                },
+                {
+                    "cases": 1057,
+                    "date": "2020-03-25",
+                    "increase": 66
+                },
+                {
+                    "cases": 1197,
+                    "date": "2020-03-26",
+                    "increase": 140
+                },
+                {
+                    "cases": 1408,
+                    "date": "2020-03-27",
+                    "increase": 211
+                },
+                {
+                    "cases": 1526,
+                    "date": "2020-03-28",
+                    "increase": 118
+                }
+            ]
+        },
+        {
+            "name": "Philippines",
+            "stats": {
+                "cases": 1418,
+                "deaths": 71,
+                "largest_increase": {
+                    "date": "2020-03-29",
+                    "increase": 343
+                },
+                "recovered": 42
+            },
+            "values": [
+                {
+                    "cases": 1,
+                    "date": "2020-01-30",
+                    "increase": 1
+                },
+                {
+                    "cases": 2,
+                    "date": "2020-02-02",
+                    "increase": 1
+                },
+                {
+                    "cases": 3,
+                    "date": "2020-02-05",
+                    "increase": 1
+                },
+                {
+                    "cases": 3,
+                    "date": "2020-02-10",
+                    "increase": 0
+                },
+                {
+                    "cases": 5,
+                    "date": "2020-03-05",
+                    "increase": 2
+                },
+                {
+                    "cases": 6,
+                    "date": "2020-03-07",
+                    "increase": 1
+                },
+                {
+                    "cases": 10,
+                    "date": "2020-03-08",
+                    "increase": 4
+                },
+                {
+                    "cases": 24,
+                    "date": "2020-03-09",
+                    "increase": 14
+                },
+                {
+                    "cases": 33,
+                    "date": "2020-03-10",
+                    "increase": 9
+                },
+                {
+                    "cases": 49,
+                    "date": "2020-03-11",
+                    "increase": 16
+                },
+                {
+                    "cases": 52,
+                    "date": "2020-03-12",
+                    "increase": 3
+                },
+                {
+                    "cases": 64,
+                    "date": "2020-03-13",
+                    "increase": 12
+                },
+                {
+                    "cases": 111,
+                    "date": "2020-03-14",
+                    "increase": 47
+                },
+                {
+                    "cases": 140,
+                    "date": "2020-03-15",
+                    "increase": 29
+                },
+                {
+                    "cases": 142,
+                    "date": "2020-03-16",
+                    "increase": 2
+                },
+                {
+                    "cases": 187,
+                    "date": "2020-03-17",
+                    "increase": 45
+                },
+                {
+                    "cases": 202,
+                    "date": "2020-03-18",
+                    "increase": 15
+                },
+                {
+                    "cases": 217,
+                    "date": "2020-03-19",
+                    "increase": 15
+                },
+                {
+                    "cases": 230,
+                    "date": "2020-03-20",
+                    "increase": 13
+                },
+                {
+                    "cases": 307,
+                    "date": "2020-03-21",
+                    "increase": 77
+                },
+                {
+                    "cases": 380,
+                    "date": "2020-03-22",
+                    "increase": 73
+                },
+                {
+                    "cases": 462,
+                    "date": "2020-03-23",
+                    "increase": 82
+                },
+                {
+                    "cases": 552,
+                    "date": "2020-03-24",
+                    "increase": 90
+                },
+                {
+                    "cases": 636,
+                    "date": "2020-03-25",
+                    "increase": 84
+                },
+                {
+                    "cases": 707,
+                    "date": "2020-03-26",
+                    "increase": 71
+                },
+                {
+                    "cases": 803,
+                    "date": "2020-03-27",
+                    "increase": 96
+                },
+                {
+                    "cases": 1075,
+                    "date": "2020-03-28",
+                    "increase": 272
+                },
+                {
+                    "cases": 1418,
+                    "date": "2020-03-29",
+                    "increase": 343
                 }
             ]
         },
         {
             "name": "Thailand",
             "stats": {
-                "cases": 1245,
-                "deaths": 6,
+                "cases": 1388,
+                "deaths": 7,
                 "largest_increase": {
                     "date": "2020-03-22",
                     "increase": 188
                 },
-                "recovered": 100
+                "recovered": 111
             },
             "values": [
                 {
@@ -6463,13 +6758,291 @@ const DATA = {
                     "cases": 1245,
                     "date": "2020-03-28",
                     "increase": 109
+                },
+                {
+                    "cases": 1388,
+                    "date": "2020-03-29",
+                    "increase": 143
+                }
+            ]
+        },
+        {
+            "name": "Indonesia",
+            "stats": {
+                "cases": 1285,
+                "deaths": 114,
+                "largest_increase": {
+                    "date": "2020-03-27",
+                    "increase": 153
+                },
+                "recovered": 64
+            },
+            "values": [
+                {
+                    "cases": 2,
+                    "date": "2020-03-02",
+                    "increase": 2
+                },
+                {
+                    "cases": 4,
+                    "date": "2020-03-06",
+                    "increase": 2
+                },
+                {
+                    "cases": 6,
+                    "date": "2020-03-08",
+                    "increase": 2
+                },
+                {
+                    "cases": 19,
+                    "date": "2020-03-09",
+                    "increase": 13
+                },
+                {
+                    "cases": 27,
+                    "date": "2020-03-10",
+                    "increase": 8
+                },
+                {
+                    "cases": 34,
+                    "date": "2020-03-11",
+                    "increase": 7
+                },
+                {
+                    "cases": 34,
+                    "date": "2020-03-12",
+                    "increase": 0
+                },
+                {
+                    "cases": 69,
+                    "date": "2020-03-13",
+                    "increase": 35
+                },
+                {
+                    "cases": 96,
+                    "date": "2020-03-14",
+                    "increase": 27
+                },
+                {
+                    "cases": 117,
+                    "date": "2020-03-15",
+                    "increase": 21
+                },
+                {
+                    "cases": 134,
+                    "date": "2020-03-16",
+                    "increase": 17
+                },
+                {
+                    "cases": 172,
+                    "date": "2020-03-17",
+                    "increase": 38
+                },
+                {
+                    "cases": 227,
+                    "date": "2020-03-18",
+                    "increase": 55
+                },
+                {
+                    "cases": 308,
+                    "date": "2020-03-19",
+                    "increase": 81
+                },
+                {
+                    "cases": 369,
+                    "date": "2020-03-20",
+                    "increase": 61
+                },
+                {
+                    "cases": 450,
+                    "date": "2020-03-21",
+                    "increase": 81
+                },
+                {
+                    "cases": 514,
+                    "date": "2020-03-22",
+                    "increase": 64
+                },
+                {
+                    "cases": 579,
+                    "date": "2020-03-23",
+                    "increase": 65
+                },
+                {
+                    "cases": 686,
+                    "date": "2020-03-24",
+                    "increase": 107
+                },
+                {
+                    "cases": 790,
+                    "date": "2020-03-25",
+                    "increase": 104
+                },
+                {
+                    "cases": 893,
+                    "date": "2020-03-26",
+                    "increase": 103
+                },
+                {
+                    "cases": 1046,
+                    "date": "2020-03-27",
+                    "increase": 153
+                },
+                {
+                    "cases": 1155,
+                    "date": "2020-03-28",
+                    "increase": 109
+                },
+                {
+                    "cases": 1285,
+                    "date": "2020-03-29",
+                    "increase": 130
+                }
+            ]
+        },
+        {
+            "name": "Saudi Arabia",
+            "stats": {
+                "cases": 1203,
+                "deaths": 4,
+                "largest_increase": {
+                    "date": "2020-03-24",
+                    "increase": 205
+                },
+                "recovered": 37
+            },
+            "values": [
+                {
+                    "cases": 1,
+                    "date": "2020-03-02",
+                    "increase": 1
+                },
+                {
+                    "cases": 2,
+                    "date": "2020-03-04",
+                    "increase": 1
+                },
+                {
+                    "cases": 5,
+                    "date": "2020-03-05",
+                    "increase": 3
+                },
+                {
+                    "cases": 7,
+                    "date": "2020-03-07",
+                    "increase": 2
+                },
+                {
+                    "cases": 11,
+                    "date": "2020-03-08",
+                    "increase": 4
+                },
+                {
+                    "cases": 15,
+                    "date": "2020-03-09",
+                    "increase": 4
+                },
+                {
+                    "cases": 20,
+                    "date": "2020-03-10",
+                    "increase": 5
+                },
+                {
+                    "cases": 45,
+                    "date": "2020-03-11",
+                    "increase": 25
+                },
+                {
+                    "cases": 62,
+                    "date": "2020-03-12",
+                    "increase": 17
+                },
+                {
+                    "cases": 86,
+                    "date": "2020-03-13",
+                    "increase": 24
+                },
+                {
+                    "cases": 103,
+                    "date": "2020-03-14",
+                    "increase": 17
+                },
+                {
+                    "cases": 118,
+                    "date": "2020-03-15",
+                    "increase": 15
+                },
+                {
+                    "cases": 133,
+                    "date": "2020-03-16",
+                    "increase": 15
+                },
+                {
+                    "cases": 171,
+                    "date": "2020-03-17",
+                    "increase": 38
+                },
+                {
+                    "cases": 238,
+                    "date": "2020-03-18",
+                    "increase": 67
+                },
+                {
+                    "cases": 274,
+                    "date": "2020-03-19",
+                    "increase": 36
+                },
+                {
+                    "cases": 344,
+                    "date": "2020-03-20",
+                    "increase": 70
+                },
+                {
+                    "cases": 392,
+                    "date": "2020-03-21",
+                    "increase": 48
+                },
+                {
+                    "cases": 511,
+                    "date": "2020-03-22",
+                    "increase": 119
+                },
+                {
+                    "cases": 562,
+                    "date": "2020-03-23",
+                    "increase": 51
+                },
+                {
+                    "cases": 767,
+                    "date": "2020-03-24",
+                    "increase": 205
+                },
+                {
+                    "cases": 900,
+                    "date": "2020-03-25",
+                    "increase": 133
+                },
+                {
+                    "cases": 1012,
+                    "date": "2020-03-26",
+                    "increase": 112
+                },
+                {
+                    "cases": 1104,
+                    "date": "2020-03-27",
+                    "increase": 92
+                },
+                {
+                    "cases": 1203,
+                    "date": "2020-03-28",
+                    "increase": 99
                 }
             ]
         },
         {
             "name": "South Africa",
             "stats": {
-                "cases": 1170,
+                "cases": 1187,
                 "deaths": 1,
                 "largest_increase": {
                     "date": "2020-03-27",
@@ -6592,6 +7165,11 @@ const DATA = {
                     "cases": 1170,
                     "date": "2020-03-27",
                     "increase": 243
+                },
+                {
+                    "cases": 1187,
+                    "date": "2020-03-28",
+                    "increase": 17
                 }
             ]
         },
@@ -6599,10 +7177,10 @@ const DATA = {
             "name": "Finland",
             "stats": {
                 "cases": 1163,
-                "deaths": 7,
+                "deaths": 9,
                 "largest_increase": {
-                    "date": "2020-03-22",
-                    "increase": 103
+                    "date": "2020-03-28",
+                    "increase": 109
                 },
                 "recovered": 10
             },
@@ -6703,49 +7281,49 @@ const DATA = {
                     "increase": 46
                 },
                 {
-                    "cases": 225,
+                    "cases": 227,
                     "date": "2020-03-14",
-                    "increase": 68
+                    "increase": 70
                 },
                 {
                     "cases": 243,
                     "date": "2020-03-15",
-                    "increase": 18
+                    "increase": 16
                 },
                 {
-                    "cases": 277,
+                    "cases": 275,
                     "date": "2020-03-16",
-                    "increase": 34
+                    "increase": 32
                 },
                 {
-                    "cases": 317,
+                    "cases": 315,
                     "date": "2020-03-17",
                     "increase": 40
                 },
                 {
-                    "cases": 359,
+                    "cases": 357,
                     "date": "2020-03-18",
                     "increase": 42
                 },
                 {
-                    "cases": 400,
+                    "cases": 398,
                     "date": "2020-03-19",
                     "increase": 41
                 },
                 {
-                    "cases": 450,
+                    "cases": 448,
                     "date": "2020-03-20",
                     "increase": 50
                 },
                 {
-                    "cases": 523,
+                    "cases": 521,
                     "date": "2020-03-21",
                     "increase": 73
                 },
                 {
                     "cases": 626,
                     "date": "2020-03-22",
-                    "increase": 103
+                    "increase": 105
                 },
                 {
                     "cases": 700,
@@ -6768,424 +7346,191 @@ const DATA = {
                     "increase": 78
                 },
                 {
+                    "cases": 1058,
+                    "date": "2020-03-27",
+                    "increase": 100
+                },
+                {
                     "cases": 1163,
-                    "date": "2020-03-27",
-                    "increase": 98
-                }
-            ]
-        },
-        {
-            "name": "Indonesia",
-            "stats": {
-                "cases": 1155,
-                "deaths": 102,
-                "largest_increase": {
-                    "date": "2020-03-27",
-                    "increase": 153
-                },
-                "recovered": 59
-            },
-            "values": [
-                {
-                    "cases": 2,
-                    "date": "2020-03-02",
-                    "increase": 2
-                },
-                {
-                    "cases": 4,
-                    "date": "2020-03-06",
-                    "increase": 2
-                },
-                {
-                    "cases": 6,
-                    "date": "2020-03-08",
-                    "increase": 2
-                },
-                {
-                    "cases": 19,
-                    "date": "2020-03-09",
-                    "increase": 13
-                },
-                {
-                    "cases": 27,
-                    "date": "2020-03-10",
-                    "increase": 8
-                },
-                {
-                    "cases": 34,
-                    "date": "2020-03-11",
-                    "increase": 7
-                },
-                {
-                    "cases": 34,
-                    "date": "2020-03-12",
-                    "increase": 0
-                },
-                {
-                    "cases": 69,
-                    "date": "2020-03-13",
-                    "increase": 35
-                },
-                {
-                    "cases": 96,
-                    "date": "2020-03-14",
-                    "increase": 27
-                },
-                {
-                    "cases": 117,
-                    "date": "2020-03-15",
-                    "increase": 21
-                },
-                {
-                    "cases": 134,
-                    "date": "2020-03-16",
-                    "increase": 17
-                },
-                {
-                    "cases": 172,
-                    "date": "2020-03-17",
-                    "increase": 38
-                },
-                {
-                    "cases": 227,
-                    "date": "2020-03-18",
-                    "increase": 55
-                },
-                {
-                    "cases": 308,
-                    "date": "2020-03-19",
-                    "increase": 81
-                },
-                {
-                    "cases": 369,
-                    "date": "2020-03-20",
-                    "increase": 61
-                },
-                {
-                    "cases": 450,
-                    "date": "2020-03-21",
-                    "increase": 81
-                },
-                {
-                    "cases": 514,
-                    "date": "2020-03-22",
-                    "increase": 64
-                },
-                {
-                    "cases": 579,
-                    "date": "2020-03-23",
-                    "increase": 65
-                },
-                {
-                    "cases": 686,
-                    "date": "2020-03-24",
-                    "increase": 107
-                },
-                {
-                    "cases": 790,
-                    "date": "2020-03-25",
-                    "increase": 104
-                },
-                {
-                    "cases": 893,
-                    "date": "2020-03-26",
-                    "increase": 103
-                },
-                {
-                    "cases": 1046,
-                    "date": "2020-03-27",
-                    "increase": 153
-                },
-                {
-                    "cases": 1155,
                     "date": "2020-03-28",
                     "increase": 109
                 }
             ]
         },
         {
-            "name": "Saudi Arabia",
+            "name": "Greece",
             "stats": {
-                "cases": 1104,
-                "deaths": 3,
+                "cases": 1061,
+                "deaths": 32,
                 "largest_increase": {
-                    "date": "2020-03-24",
-                    "increase": 205
+                    "date": "2020-03-15",
+                    "increase": 103
                 },
-                "recovered": 35
+                "recovered": 52
             },
             "values": [
                 {
                     "cases": 1,
-                    "date": "2020-03-02",
+                    "date": "2020-02-26",
                     "increase": 1
                 },
                 {
-                    "cases": 2,
-                    "date": "2020-03-04",
+                    "cases": 3,
+                    "date": "2020-02-27",
+                    "increase": 2
+                },
+                {
+                    "cases": 4,
+                    "date": "2020-02-28",
                     "increase": 1
                 },
                 {
-                    "cases": 5,
-                    "date": "2020-03-05",
+                    "cases": 7,
+                    "date": "2020-02-29",
                     "increase": 3
                 },
                 {
                     "cases": 7,
-                    "date": "2020-03-07",
+                    "date": "2020-03-01",
+                    "increase": 0
+                },
+                {
+                    "cases": 7,
+                    "date": "2020-03-02",
+                    "increase": 0
+                },
+                {
+                    "cases": 7,
+                    "date": "2020-03-03",
+                    "increase": 0
+                },
+                {
+                    "cases": 9,
+                    "date": "2020-03-04",
                     "increase": 2
                 },
                 {
-                    "cases": 11,
+                    "cases": 31,
+                    "date": "2020-03-05",
+                    "increase": 22
+                },
+                {
+                    "cases": 45,
+                    "date": "2020-03-06",
+                    "increase": 14
+                },
+                {
+                    "cases": 66,
+                    "date": "2020-03-07",
+                    "increase": 21
+                },
+                {
+                    "cases": 73,
                     "date": "2020-03-08",
-                    "increase": 4
+                    "increase": 7
                 },
                 {
-                    "cases": 15,
+                    "cases": 84,
                     "date": "2020-03-09",
-                    "increase": 4
+                    "increase": 11
                 },
                 {
-                    "cases": 20,
+                    "cases": 89,
                     "date": "2020-03-10",
                     "increase": 5
                 },
                 {
-                    "cases": 45,
+                    "cases": 99,
                     "date": "2020-03-11",
-                    "increase": 25
+                    "increase": 10
                 },
                 {
-                    "cases": 62,
+                    "cases": 117,
                     "date": "2020-03-12",
-                    "increase": 17
+                    "increase": 18
                 },
                 {
-                    "cases": 86,
+                    "cases": 190,
                     "date": "2020-03-13",
-                    "increase": 24
-                },
-                {
-                    "cases": 103,
-                    "date": "2020-03-14",
-                    "increase": 17
-                },
-                {
-                    "cases": 118,
-                    "date": "2020-03-15",
-                    "increase": 15
-                },
-                {
-                    "cases": 133,
-                    "date": "2020-03-16",
-                    "increase": 15
-                },
-                {
-                    "cases": 171,
-                    "date": "2020-03-17",
-                    "increase": 38
-                },
-                {
-                    "cases": 238,
-                    "date": "2020-03-18",
-                    "increase": 67
-                },
-                {
-                    "cases": 274,
-                    "date": "2020-03-19",
-                    "increase": 36
-                },
-                {
-                    "cases": 344,
-                    "date": "2020-03-20",
-                    "increase": 70
-                },
-                {
-                    "cases": 392,
-                    "date": "2020-03-21",
-                    "increase": 48
-                },
-                {
-                    "cases": 511,
-                    "date": "2020-03-22",
-                    "increase": 119
-                },
-                {
-                    "cases": 562,
-                    "date": "2020-03-23",
-                    "increase": 51
-                },
-                {
-                    "cases": 767,
-                    "date": "2020-03-24",
-                    "increase": 205
-                },
-                {
-                    "cases": 900,
-                    "date": "2020-03-25",
-                    "increase": 133
-                },
-                {
-                    "cases": 1012,
-                    "date": "2020-03-26",
-                    "increase": 112
-                },
-                {
-                    "cases": 1104,
-                    "date": "2020-03-27",
-                    "increase": 92
-                }
-            ]
-        },
-        {
-            "name": "Philippines",
-            "stats": {
-                "cases": 1075,
-                "deaths": 68,
-                "largest_increase": {
-                    "date": "2020-03-28",
-                    "increase": 272
-                },
-                "recovered": 35
-            },
-            "values": [
-                {
-                    "cases": 1,
-                    "date": "2020-01-30",
-                    "increase": 1
-                },
-                {
-                    "cases": 2,
-                    "date": "2020-02-02",
-                    "increase": 1
-                },
-                {
-                    "cases": 3,
-                    "date": "2020-02-05",
-                    "increase": 1
-                },
-                {
-                    "cases": 3,
-                    "date": "2020-02-10",
-                    "increase": 0
-                },
-                {
-                    "cases": 5,
-                    "date": "2020-03-05",
-                    "increase": 2
-                },
-                {
-                    "cases": 6,
-                    "date": "2020-03-07",
-                    "increase": 1
-                },
-                {
-                    "cases": 10,
-                    "date": "2020-03-08",
-                    "increase": 4
-                },
-                {
-                    "cases": 24,
-                    "date": "2020-03-09",
-                    "increase": 14
-                },
-                {
-                    "cases": 33,
-                    "date": "2020-03-10",
-                    "increase": 9
-                },
-                {
-                    "cases": 49,
-                    "date": "2020-03-11",
-                    "increase": 16
-                },
-                {
-                    "cases": 52,
-                    "date": "2020-03-12",
-                    "increase": 3
-                },
-                {
-                    "cases": 64,
-                    "date": "2020-03-13",
-                    "increase": 12
-                },
-                {
-                    "cases": 111,
-                    "date": "2020-03-14",
-                    "increase": 47
-                },
-                {
-                    "cases": 140,
-                    "date": "2020-03-15",
-                    "increase": 29
-                },
-                {
-                    "cases": 142,
-                    "date": "2020-03-16",
-                    "increase": 2
-                },
-                {
-                    "cases": 187,
-                    "date": "2020-03-17",
-                    "increase": 45
-                },
-                {
-                    "cases": 202,
-                    "date": "2020-03-18",
-                    "increase": 15
-                },
-                {
-                    "cases": 217,
-                    "date": "2020-03-19",
-                    "increase": 15
-                },
-                {
-                    "cases": 230,
-                    "date": "2020-03-20",
-                    "increase": 13
-                },
-                {
-                    "cases": 307,
-                    "date": "2020-03-21",
-                    "increase": 77
-                },
-                {
-                    "cases": 380,
-                    "date": "2020-03-22",
                     "increase": 73
                 },
                 {
-                    "cases": 462,
+                    "cases": 228,
+                    "date": "2020-03-14",
+                    "increase": 38
+                },
+                {
+                    "cases": 331,
+                    "date": "2020-03-15",
+                    "increase": 103
+                },
+                {
+                    "cases": 352,
+                    "date": "2020-03-16",
+                    "increase": 21
+                },
+                {
+                    "cases": 387,
+                    "date": "2020-03-17",
+                    "increase": 35
+                },
+                {
+                    "cases": 418,
+                    "date": "2020-03-18",
+                    "increase": 31
+                },
+                {
+                    "cases": 464,
+                    "date": "2020-03-19",
+                    "increase": 46
+                },
+                {
+                    "cases": 495,
+                    "date": "2020-03-20",
+                    "increase": 31
+                },
+                {
+                    "cases": 530,
+                    "date": "2020-03-21",
+                    "increase": 35
+                },
+                {
+                    "cases": 624,
+                    "date": "2020-03-22",
+                    "increase": 94
+                },
+                {
+                    "cases": 695,
                     "date": "2020-03-23",
-                    "increase": 82
+                    "increase": 71
                 },
                 {
-                    "cases": 552,
+                    "cases": 743,
                     "date": "2020-03-24",
-                    "increase": 90
+                    "increase": 48
                 },
                 {
-                    "cases": 636,
+                    "cases": 821,
                     "date": "2020-03-25",
-                    "increase": 84
+                    "increase": 78
                 },
                 {
-                    "cases": 707,
+                    "cases": 892,
                     "date": "2020-03-26",
                     "increase": 71
                 },
                 {
-                    "cases": 803,
+                    "cases": 966,
                     "date": "2020-03-27",
-                    "increase": 96
+                    "increase": 74
                 },
                 {
-                    "cases": 1075,
+                    "cases": 1061,
                     "date": "2020-03-28",
-                    "increase": 272
+                    "increase": 95
                 }
             ]
         }
     ],
-    "updated": "2020-03-28 12:08:38.964577"
+    "updated": "2020-03-29 11:15:57.441446"
 };
