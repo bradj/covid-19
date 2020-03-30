@@ -18,6 +18,8 @@ const STATES_DATA = STATES.series.map(d => {
       values: d.values.map(v => {
           return {
               cases: v.positive,
+              deaths: v.death,
+              hospitalized: v.hospitalized,
               date: d3.utcParse("%Y-%m-%d")(v.date)
           };
       })
