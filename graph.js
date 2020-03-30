@@ -238,6 +238,8 @@ class Graph {
   }
 
   hover() {
+    this.dot = this.create_dot();
+
     if ("ontouchstart" in document) {
       this.svg
         .on("touchmove", this.moved.bind(this))
@@ -250,17 +252,5 @@ class Graph {
         .on("mouseenter", this.entered.bind(this))
         .on("mouseleave", this.left.bind(this));
     }
-
-    this.dot = this.svg.append("g")
-      .attr("display", "none");
-
-    this.dot.append("circle")
-        .attr("r", 2.5);
-
-    this.dot.append("text")
-        .attr("font-family", "sans-serif")
-        .attr("font-size", 10)
-        .attr("text-anchor", "middle")
-        .attr("y", -15);
   }
 }

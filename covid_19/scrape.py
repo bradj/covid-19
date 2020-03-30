@@ -19,7 +19,7 @@ def parse_country_stats(html, country):
     table = soup.find("div", class_='barbox tright')
 
     if not table:
-        return None
+        return (None, None)
 
     trs = table.find('tbody').find_all('tr')
 
