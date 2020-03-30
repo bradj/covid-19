@@ -126,6 +126,9 @@ def get_states():
 
         dates.append(i['date'])
 
+        if i['positive'] is None:
+            i['positive'] = 0
+
         found = False
         for state in states['series']:
             if state['name'] != i['state']:
