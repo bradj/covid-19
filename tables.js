@@ -86,9 +86,9 @@ function print_states_table(table) {
   cases.innerText = 'cases';
   head_tr.appendChild(cases);
 
-  const negative = document.createElement('th');
-  negative.innerText = 'negative';
-  head_tr.appendChild(negative);
+  const hospitalized = document.createElement('th');
+  hospitalized.innerText = 'hospitalized';
+  head_tr.appendChild(hospitalized);
 
   const deaths = document.createElement('th');
   deaths.innerText = 'deaths';
@@ -108,13 +108,13 @@ function print_states_table(table) {
     state.innerText = d.name;
 
     let cases = document.createElement('td');
-    cases.innerText = d.stats.positive;
+    cases.innerText = d.stats.positive || '-';
 
     let deaths = document.createElement('td');
-    deaths.innerText = d.stats.death;
+    deaths.innerText = d.stats.death || '-';
 
-    let negative = document.createElement('td');
-    negative.innerText = d.stats.negative;
+    let hospitalized = document.createElement('td');
+    hospitalized.innerText = d.stats.hospitalized || '-';
 
     let largest_increase = document.createElement('td');
     let increase = '-';
@@ -134,7 +134,7 @@ function print_states_table(table) {
 
     tr.appendChild(state);
     tr.appendChild(cases);
-    tr.appendChild(negative);
+    tr.appendChild(hospitalized);
     tr.appendChild(deaths);
     tr.appendChild(largest_increase);
 

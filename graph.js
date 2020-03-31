@@ -28,12 +28,13 @@ class Graph {
       .call(this.yAxis.bind(this));
 
     // we're displaying a single entity
-    if (this.data.length === 1 && this.data[0].values[0].deaths !== undefined) {
+    if (this.data.length === 1 && this.data[0].values.length > 0 && this.data[0].values[0].deaths !== undefined) {
       this.death_line = this.create_line('deaths');
       this.death_path = this.create_path(this.data, this.death_line, 'red');
 
-      this.hospitalized_line = this.create_line('hospitalized');
-      this.hospitalized_path = this.create_path(this.data, this.hospitalized_line, 'green');
+      // this is horrible. i'm sorry.
+      this.third_line = this.create_line(this.data[0].values[0].recovered !== undefined ? 'recovered' : 'hospitalized');
+      this.third_path = this.create_path(this.data, this.third_line, 'green');
 
       this.svg.call(this.single_hover.bind(this));
     } else {
@@ -169,13 +170,13 @@ class Graph {
   single_entered() {
     this.cases_dot.attr("display", null);
     this.death_dot.attr("display", null);
-    this.hospitalized_dot.attr("display", null);
+    this.third_dot.attr("display", null);
   }
 
   single_left() {
     this.cases_dot.attr("display", "none");
     this.death_dot.attr("display", "none");
-    this.hospitalized_dot.attr("display", "none");
+    this.third_dot.attr("display", "none");
   }
 
   single_moved() {
@@ -214,14 +215,19 @@ class Graph {
     this.death_dot.attr("transform", `translate(${this.x(point_in_time.date)},${this.y(point_in_time.deaths)})`);
     this.death_dot.select("text").text(`Deaths: ${point_in_time.deaths}`);
 
-    this.hospitalized_dot.attr("transform", `translate(${this.x(point_in_time.date)},${this.y(point_in_time.hospitalized)})`);
-    this.hospitalized_dot.select("text").text(`Hospitalized: ${point_in_time.hospitalized || 'N/A'}`);
+    if (point_in_time.recovered !== undefined) {
+      this.third_dot.attr("transform", `translate(${this.x(point_in_time.date)},${this.y(point_in_time.recovered)})`);
+      this.third_dot.select("text").text(`Recovered: ${point_in_time.recovered || 'N/A'}`);
+    } else {
+      this.third_dot.attr("transform", `translate(${this.x(point_in_time.date)},${this.y(point_in_time.hospitalized)})`);
+      this.third_dot.select("text").text(`Hospitalized: ${point_in_time.hospitalized || 'N/A'}`);
+    }
   }
 
   single_hover() {
     this.cases_dot = this.create_dot();
     this.death_dot = this.create_dot();
-    this.hospitalized_dot = this.create_dot();
+    this.third_dot = this.create_dot();
 
     if ("ontouchstart" in document) {
       this.svg

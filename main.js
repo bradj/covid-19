@@ -5,6 +5,8 @@ const COUNTRY_DATA = DATA.series.map(d => {
         values: d.values.map(v => {
             return {
                 cases: v.cases,
+                deaths: v.deaths,
+                recovered: v.recovered,
                 date: d3.utcParse("%Y-%m-%d")(v.date)
             };
         })
@@ -70,6 +72,6 @@ toggle_us.addEventListener('click', (evt) => {
     show_us();
 });
 
-document.getElementById('updated').innerText = `Updated: ${DATA.updated} UTC`;
+document.getElementById('updated').innerText = `Updated: ${UPDATED} UTC`;
 
 show_world();
