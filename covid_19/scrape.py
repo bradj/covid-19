@@ -2,111 +2,128 @@ from datetime import datetime
 import json
 import re
 
-import requests
-from bs4 import BeautifulSoup
 
-url_prefix = 'https://en.wikipedia.org'
+def date_format(date):
+    d = date.split('/')
+
+    year = f'20{d[2]}'
+    month = d[0] if len(d[0]) == 2 else f'0{d[0]}'
+    day = d[1]
+
+    return f'{year}-{month}-{day}'
+
+
+def remove_countries(countries):
+    del_idx = []
+    for idx, country in enumerate(countries['series']):
+        # remove countries without data
+        if len(country['values']) <= 0:
+            del_idx.append(idx)
+            continue
+
+        # sort values by date
+        country['values'] = sorted(country['values'], key=lambda value: value['date'])
+
+        stats = country['values'][-1]
+
+        # remove countries with less than 1000 cases
+        if stats['cases'] < 1000:
+            del_idx.append(idx)
+            continue
+
+        country['stats'] = {
+            'cases': stats['cases'],
+            'deaths': stats['deaths'],
+            'recovered': stats['recovered'],
+            'largest_increase': country['stats']['largest_increase']}
+
+    for idx in sorted(del_idx, reverse=True):
+        del countries['series'][idx]
+
+    return countries
+
+
+def get_largest_increase(values):
+    li = {
+        'date': None,
+        'increase': 0
+    }
+
+    prev = 0
+    for value in values:
+        increase = value['cases'] - prev
+
+        if increase > li['increase']:
+            li['increase'] = increase
+            li['date'] = value['date']
+
+        prev = value['cases']
+
+    return li
+
+
+def get_country_data():
+    countries = {
+        'dates': [],
+        'series': []
+    }
+
+    dates = []
+
+    with open('lookup.json', 'r') as f:
+        lookup = json.loads(f.read())
+
+    with open('countries.json', 'r') as f:
+        data = json.loads(f.read())['data']
+
+    for d_country in data:
+        d_country['name'] = lookup[d_country['countrycode']]
+        d_country['date'] = date_format(d_country['date'])
+        dates.append(d_country['date'])
+
+        found = False
+        for country in countries['series']:
+            if d_country['name'] != country['name']:
+                continue
+
+            found = True
+            country['values'].append({
+                'cases': int(d_country['cases']),
+                'deaths': int(d_country['deaths']),
+                'recovered': int(d_country['recovered']),
+                'date': d_country['date'],
+            })
+
+        if not found:
+            countries['series'].append({
+                'name': d_country['name'],
+                'stats': {
+                    'cases': 0,
+                    'deaths': 0,
+                    'recovered': 0,
+                    'largest_increase': {
+                        'prev': 0,
+                        'date': None,
+                        'increase': 0
+                    }
+                },
+                'values': []
+            })
+
+    countries = remove_countries(countries)
+
+    for country in countries['series']:
+        country['stats']['largest_increase'] = get_largest_increase(country['values'])
+
+    countries['dates'] = sorted(list(set(dates)))
+    countries['series'] = sorted(countries['series'], key=lambda country: country['stats']['cases'], reverse=True)
+
+    return countries
 
 
 def str_to_int(s):
     s = re.sub(r'[\D]', '', s)
     return int(s.encode('ascii', 'ignore'))
-
-
-def parse_country_stats(html, country):
-    soup = BeautifulSoup(html, features='html.parser')
-
-    table = soup.find("div", class_='barbox tright')
-
-    if not table:
-        return (None, None)
-
-    trs = table.find('tbody').find_all('tr')
-
-    data = {'name': country}
-    prev_total = 0
-    largest_increase = {'increase': 0, 'date': None}
-    values = []
-
-    for tr in trs:
-        if 'style' in tr:
-            continue
-
-        tds = tr.find_all('td')
-
-        if len(tds) == 0:
-            continue
-
-        try:
-            dt = datetime.strptime(tds[0].text, "%Y-%m-%d")
-        except ValueError as ex:
-            # not a date
-            continue
-
-        cases = tds[2].text.strip()
-        cases = cases if cases else tds[3].text.strip()
-        cases = cases if cases.find('(') == -1 else cases[:cases.find('(')]
-        cases = str_to_int(cases)
-
-        increase = cases - prev_total
-
-        if increase > largest_increase['increase']:
-            largest_increase['increase'] = increase
-            largest_increase['date'] = str(dt.date())
-
-        values.append({
-            'date': str(dt.date()),
-            'cases': cases,
-            'increase': increase,
-        })
-
-        prev_total = cases
-
-    data['values'] = values
-
-    return (data, {'largest_increase': largest_increase})
-
-
-def get_countries():
-    html = requests.get(f'https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic').text
-    soup = BeautifulSoup(html, features='html.parser')
-
-    d = soup.find('div', attrs={'id': 'covid19-container'})
-
-    tbody = d.find('tbody')
-    trs = tbody.find_all('tr')
-
-    urls = []
-
-    for tr in trs:
-        ths = tr.find_all('th')
-
-        if (len(ths) != 2):
-            continue
-
-        a = ths[1].find('a')
-        txt = ''
-        for child in a.children:
-            if child.name == 'span':
-                txt = '%s %s' % (txt, child.contents[0])
-            else:
-                txt = child
-
-        tds = tr.find_all('td')
-        data = {
-            'cases': str_to_int(tds[0].string) if tds[0].string else '-',
-            'deaths': str_to_int(tds[1].string) if tds[1].string else '-',
-            'recovered': str_to_int(tds[2].string) if tds[2].string else '-',
-        }
-
-        # since the table is in decreasing order we can
-        # stop parsing once we hit < 1000 cases
-        if data['cases'] < 1000:
-            break
-
-        urls.append((a['href'], txt, data))
-
-    return(urls)
 
 
 def get_states():
@@ -115,9 +132,9 @@ def get_states():
         'series': []
     }
 
-    r = requests.get('https://covidtracking.com/api/states/daily')
+    with open('states.json', 'r') as f:
+        response = json.loads(f.read())
 
-    response = r.json()
     dates = []
 
     for idx, i in enumerate(response):
@@ -162,45 +179,6 @@ def get_states():
     return states
 
 
-countries = get_countries()
-
-series = []
-
-for url, name, data in countries:
-    if data['cases'] < 1000:
-        continue
-
-    try:
-        result, stats = parse_country_stats(requests.get('%s%s' % (url_prefix, url)).text, name)
-    except Exception as ex:
-        print(name, ex)
-        continue
-
-    if not result:
-        continue
-
-    # Sometimes the country specific pages take longer than the global page to receive updates
-    # Because of this, I am replacing the last country specific case count with the case count
-    # from the global pandemic page.
-    #
-    # I might have to remove this at some point since it's a bit hacky but for now
-    # it solves a problem so w/e.
-    if len(result['values']) > 0 and result['values'][-1]['cases'] != data['cases']:
-        result['values'][-1]['cases'] = data['cases']
-
-    result['stats'] = {**data, **stats}
-    series.append(result)
-
-dates = []
-for s in series:
-    for v in s['values']:
-        dates.append(v['date'])
-
-output = {
-    'series': series,
-    'dates': sorted(list(set(dates))),
-    'updated': str(datetime.utcnow())
-}
-
-print('const DATA = %s;' % json.dumps(output))
-print('const STATES = %s;' % json.dumps(get_states()))
+print('const UPDATED = "%s";' % str(datetime.utcnow()))
+print('const DATA = %s;' % json.dumps(get_country_data()).replace('", "', '","'))
+print('const STATES = %s;' % json.dumps(get_states()).replace('", "', '","'))
