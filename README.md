@@ -11,7 +11,7 @@ Country data comes from [here](https://thevirustracker.com/timeline/map-data.jso
 
 For United States, I am using [this](https://covidtracking.com/api/states/daily).
 
-All of the data is [here](data.js).
+All of the munged data is [here](data.js).
 
 I am using [D3](https://d3js.org/) to render the data. I mostly copied [this](https://observablehq.com/@d3/multi-line-chart).
 
