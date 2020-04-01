@@ -77,6 +77,9 @@ def get_country_data():
         data = json.loads(f.read())['data']
 
     for d_country in data:
+        if d_country['countrycode'] not in lookup:
+            continue
+
         d_country['name'] = lookup[d_country['countrycode']]
         d_country['date'] = date_format(d_country['date'])
         dates.append(d_country['date'])
