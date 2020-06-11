@@ -89,11 +89,18 @@ def get_country_data():
             if d_country['name'] != country['name']:
                 continue
 
+            recovered = d_country['recovered']
+
+            try:
+                recovered = int(recovered)
+            except:
+                continue
+
             found = True
             country['values'].append({
                 'cases': int(d_country['cases']),
                 'deaths': int(d_country['deaths']),
-                'recovered': int(d_country['recovered']),
+                'recovered': recovered,
                 'date': d_country['date'],
             })
 
